@@ -9,13 +9,153 @@
 		<script src="../lib/js/selectize.js"></script>
 	</head>
 	<body>
-		<div id="aaa">aaa</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6" id="card">
+					<div class="clearfix">card</div>
+				</div>
+				<div class="col-md-6" id="trainer">
+					<div class="clearfix">trainer</div>
+				</div>
+				<div class="col-md-6" id="badge">
+					<div class="clearfix">
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-01"/>
+							<label for="badge-01">
+								<p>Ground/Fairy</p>
+								<img src="pic/ground-fairy.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-02"/>
+							<label for="badge-02">
+								<p>Fighting/Rock</p>
+								<img src="pic/fighting-rock.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-03"/>
+							<label for="badge-03">
+								<p>Psychic/Steel</p>
+								<img src="pic/psychic-steel.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-04"/>
+							<label for="badge-04">
+								<p>Fire/Ice</p>
+								<img src="pic/fire-ice.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-05"/>
+							<label for="badge-05">
+								<p>Flying/Water</p>
+								<img src="pic/flying-water.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-06"/>
+							<label for="badge-06">
+								<p>Dark/Ghost</p>
+								<img src="pic/dark-ghost.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-07"/>
+							<label for="badge-07">
+								<p>Bug/Normal</p>
+								<img src="pic/bug-normal.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-08"/>
+							<label for="badge-08">
+								<p>?/?</p>
+								<img src="pic/blank-badge.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-6">
+							<input type="checkbox" id="badge-09"/>
+							<label for="badge-09">
+								<p>Johto Elite</p>
+								<img src="pic/johto.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-6">
+							<input type="checkbox" id="badge-10"/>
+							<label for="badge-10">
+								<p>Hoenn Elite</p>
+								<img src="pic/hoenn.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-6">
+							<input type="checkbox" id="badge-11"/>
+							<label for="badge-11">
+								<p>Sinnoh Elite</p>
+								<img src="pic/sinnoh.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-6">
+							<input type="checkbox" id="badge-12"/>
+							<label for="badge-12">
+								<p>Kalos Elite</p>
+								<img src="pic/kalos.png" class="img-responsive">
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6" id="pokemon">
+					<div class="clearfix">
+						<input type="text" id="pokemon">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#badge input[type="checkbox"]').button();
+				$('#pokemon').selectize({
+				    plugins: ['drag_drop'],
+				    delimiter: ',',
+				    persist: false,
+				    create: function(input) {
+				        return {
+				            value: input,
+				            text: input
+				        }
+				    }
+				});
+			});
+		</script>
+		<style>
+			.container >.row >[class*=col-] {
+				margin-top: 20px;
+			}
+			.container >.row >[class*=col-] >div {
+				border: 1px solid #ccc;
+				border-radius: 10px;
+				padding: 10px;
+			}
+			#badge input[type="checkbox"] {
+				display: none;
+			}
+			#badge input[type="checkbox"] +label {
+				cursor: pointer;
+				text-align: center;
+			}
+			#badge input[type="checkbox"] +label p {
+				color: #ddd;
+			}
+			#badge input[type="checkbox"] +label img {
+				opacity: 0.3;
+			}
+			#badge input[type="checkbox"]:checked +label p {
+				color: #000;
+			}
+			#badge input[type="checkbox"]:checked +label img {
+				opacity: 1;
+			}
+		</style>
 	</body>
-	<script>
-		$(document).ready(function () {
-			console.log('ready');
-			$('#aaa').append('ready');
-			$('#aaa').append('<img src="http://serebii.net/pokedex-xy/icon/282-m.png"/>');
-		});
-	</script>
 </html>
