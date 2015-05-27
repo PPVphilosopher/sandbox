@@ -3,9 +3,13 @@
 		<title>Card Maker</title>
 	    <link rel="stylesheet" href="../lib/css/bootstrap.min.css" />
 	    <link rel="stylesheet" href="../lib/css/jquery-ui.min.css" />
+	    <link rel="stylesheet" href="../lib/selectize/css/selectize.css">
+	    <link rel="stylesheet" href="main.css" />
+
 		<script src="../lib/js/jquery-1.11.1.min.js"></script>
 		<script src="../lib/js/bootstrap.min.js"></script>
-		<script src="../lib/js/selectize.js"></script>
+	    <script src="../lib/selectize/js/jquery.js"></script>
+	    <script src="../lib/selectize/js/selectize.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -113,64 +117,32 @@
 				</div>
 				<div class="col-md-6" id="pokemon">
 					<div class="clearfix">
-						<input type="text" id="pokemon">
+						<div class="col-md-4">
+					        <select id="select-pokemon" class="demo-default">
+					        	<option value="">Select pokemon</option>
+					        </select>
+						</div>
+						<div class="col-md-4">
+					        <select id="select-gender" class="demo-default">
+					        	<option value="">Select gender</option>
+					        </select>
+						</div>
+						<div class="col-md-4">
+					        <select id="select-form" class="demo-default">
+					        	<option value="">Select form</option>
+					        </select>
+						</div>
+						<div class="col-md-12">
+							<div id="select-preview"></div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			$(document).ready(function () {
-				$('#badge input[type="checkbox"]').button();
-				$('#pokemon').selectize({
-				    plugins: ['drag_drop'],
-				    delimiter: ',',
-				    persist: false,
-				    create: function(input) {
-				        return {
-				            value: input,
-				            text: input
-				        }
-				    }
-				});
-			});
-		</script>
-		<style>
-			.m-b-m-20 {
-				margin-bottom: -20px;
-			}
-			.m-b-m-120 {
-				margin-bottom: -120px;
-			}
-			.z-2 {
-				z-index: 2;
-			}
-			.container >.row >[class*=col-] {
-				margin-top: 20px;
-			}
-			.container >.row >[class*=col-] >div {
-				border: 1px solid #ccc;
-				border-radius: 10px;
-				padding: 10px;
-			}
-			#badge input[type="checkbox"] {
-				display: none;
-			}
-			#badge input[type="checkbox"] +label {
-				cursor: pointer;
-				text-align: center;
-			}
-			#badge input[type="checkbox"] +label p {
-				color: #ddd;
-			}
-			#badge input[type="checkbox"] +label img {
-				opacity: 0.3;
-			}
-			#badge input[type="checkbox"]:checked +label p {
-				color: #000;
-			}
-			#badge input[type="checkbox"]:checked +label img {
-				opacity: 1;
-			}
-		</style>
+		<script src="js-lib/female_ratio.js"></script>
+		<script src="js-lib/pokemon_pic.js"></script>
+		<script src="js-lib/varient.js"></script>
+		<script src="js-lib/name.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>
