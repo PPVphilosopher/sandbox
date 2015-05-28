@@ -15,10 +15,14 @@
 	border-radius: 10px;
 	padding: 10px;
 }
+#badge [class*="col-md"] {
+	pointer-events: none;
+}
 #badge input[type="checkbox"] {
 	display: none;
 }
 #badge input[type="checkbox"] +label {
+	pointer-events: visible;
 	cursor: pointer;
 	text-align: center;
 }
@@ -36,4 +40,34 @@
 }
 #select-preview {
 	margin-top: 10px;
+}
+#selected {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.selected-pokemon {
+	margin-bottom: 10px;
+	border-radius: 2px;
+	cursor: all-scroll;
+}
+.selected-pokemon:hover {
+	background-color: #eee;
+}
+#trainer-info {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+}
+#trainer-info input{
+	width: 100%;
+}
+#trainer-select {
+	margin-top: 20px;
 }

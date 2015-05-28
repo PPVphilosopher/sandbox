@@ -34,12 +34,12 @@ $(document).ready(function () {
 					gender_select.prop('disabled', true);
 					break;
 				case 0:
-					gender_select.append('<option value="m">male</option>');
+					gender_select.append('<option value="m">Male</option>');
 					gender_select.prop('disabled', true);
 					break;
 				default:
 					gender_select.append('<option value="f">Female</option>');
-					gender_select.append('<option value="m">male</option>');
+					gender_select.append('<option value="m">Male</option>');
 					break;
 			}
 
@@ -56,11 +56,20 @@ $(document).ready(function () {
 				var pokemon = $('#select-pokemon').val() + $('#select-gender').val() + $('#select-form').val();
 				var data = pokemon_pic[$('#select-pokemon').val()][$('#select-gender').val()][$('#select-form').val()];
 
-				$('#select-preview').html('<img src="pic/icon/' + data.picicon + '"/> ' + data.name);
+				var preview_pic = '<img src="pic/icon/' + data.picicon + '"/> ' + data.name + ' - ' + $('#select-gender :selected')[0].textContent;
+				$('#select-preview').html(preview_pic);
 				var button = $('<a href="javascript:void(0)" class="btn btn-info btn-sm pull-right">add</a>').appendTo($('#select-preview'));
 
 				button.on('click', function () {
-					//
+					var new_pokemon = $('<li class="dd-item"></li>').appendTo($('#selected >ol'));
+					var del_button = $('<a href="javascript:void(0)" class="btn btn-danger btn-sm pull-right">delete</a>').appendTo(new_pokemon);
+					del_button.on('click', function () {
+						new_pokemon.remove();
+					});
+					new_pokemon.append('<div class="selected-pokemon dd-handle"></div>');
+					new_pokemon.find('.selected-pokemon').append(preview_pic);
+					new_pokemon.data('code', pokemon);
+					$('#select-pokemon')[0].selectize.setValue('', false);
 				});
 			});
 
@@ -71,9 +80,16 @@ $(document).ready(function () {
 		form_select.selectize();
 	});
 
-	$('#select-gender, #select-form').prop('disabled', true);
-	$('#select-pokemon, #select-gender, #select-form').selectize();
+	var category = ['Kanto&Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Other', 'Extra'];
+	$.each(category, function (key, val) {
+		$('#select-category').append('<option value="' + val + '">' + val + '</option>');
+	});
 
+	$('#select-gender, #select-form').prop('disabled', true);
+	$('#select-pokemon, #select-gender, #select-form, #select-category').selectize();
+	$('#selected').nestable({
+        group: 0
+    });
 
     function encode(text) {
         if (!text) return text;
