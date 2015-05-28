@@ -37,7 +37,7 @@ $(document).ready(function () {
 					gender_select.append('<option value="m">male</option>');
 					gender_select.prop('disabled', true);
 					break;
-				default: 
+				default:
 					gender_select.append('<option value="f">Female</option>');
 					gender_select.append('<option value="m">male</option>');
 					break;
@@ -67,12 +67,62 @@ $(document).ready(function () {
 			$('#select-gender').trigger('change');
 		}
 
-
 		gender_select.selectize();
 		form_select.selectize();
 	});
 
 	$('#select-gender, #select-form').prop('disabled', true);
 	$('#select-pokemon, #select-gender, #select-form').selectize();
+
+
+    function encode(text) {
+        if (!text) return text;
+        text = text.toString();
+        var encode = "";
+
+        var lib_count = 93;
+        var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?\ "
+        var lib_shuffle = "nB\\N\&Ck3feMPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2GlytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@Y"
+
+        var random = parseInt(new Date().getTime()) % lib_count;
+        $.each(text, function (key, val) {
+            var index_align = lib_align.indexOf(val);
+            console.log(key + ' ' + val + ' ' + index_align)
+            if (index_align > -1) {
+                var target_shufle = (index_align + key + random) % lib_count;
+                encode += lib_shuffle[target_shufle];
+            } else {
+                encode += val;
+            }
+        });
+        return '[' + lib_align[random] + encode + ']';
+    }
+
+    function decode(text) {
+        if (!text) return text;
+        text = text.toString();
+        if (text.length < 4 || text[0] != '[' || text[text.length - 1] != ']') return text;
+        text = text.substr(1, text.length - 2);
+
+        var lib_count = 93;
+        var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?\ "
+        var lib_shuffle = "nB\\N\&Ck3feMPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2GlytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@Y"
+
+        var random = lib_align.indexOf(text[0]);
+        if (random < 0) return text;
+        text = text.substr(1);
+        var decode = "";
+        $.each(text, function (key, val) {
+            var index_shuffle = lib_shuffle.indexOf(val);
+            if (index_shuffle > -1) {
+                var target_align = (index_shuffle - key - random) % lib_count;
+                if (target_align < 0) target_align += lib_count;
+                decode += lib_align[target_align];
+            } else {
+                decode += val;
+            }
+        });
+        return decode;
+    }
 
 });
