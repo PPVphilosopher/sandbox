@@ -85,6 +85,10 @@ $(document).ready(function () {
 		$('#select-category').append('<option value="' + val + '">' + val + '</option>');
 	});
 
+	$('#select-category').on('change', function () {
+		var selected = $(this).val();
+	});
+
 	$('#select-gender, #select-form').prop('disabled', true);
 	$('#select-pokemon, #select-gender, #select-form, #select-category').selectize();
 	$('#selected').nestable({
