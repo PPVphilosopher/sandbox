@@ -902,7 +902,7 @@ var trainer = {
 	"N": {
 		"url": "Unova/N.png",
 		"name": "N",
-		"keyword": "Unova"[]
+		"keyword": ["Unova"]
 	},
 	"Nate": {
 		"url": "Unova/Nate.png",
@@ -1194,69 +1194,69 @@ var trainer = {
 		"name": "Picnicker",
 		"keyword": ["Other"]
 	},
-	"Pokémon_Breeder_F": {
-		"url": "Other/Pokémon_Breeder_F.png",
-		"name": "Pokémon_Breeder_F",
+	"Pokemon_Breeder_F": {
+		"url": "Other/Pokemon_Breeder_F.png",
+		"name": "Pokemon_Breeder_F",
 		"keyword": ["Other"]
 	},
-	"Pokémon_Breeder_F_ORAS": {
-		"url": "Other/Pokémon_Breeder_F_ORAS.png",
-		"name": "Pokémon_Breeder_F_ORAS",
+	"Pokemon_Breeder_F_ORAS": {
+		"url": "Other/Pokemon_Breeder_F_ORAS.png",
+		"name": "Pokemon_Breeder_F_ORAS",
 		"keyword": ["Other"]
 	},
-	"Pokémon_Breeder_M": {
-		"url": "Other/Pokémon_Breeder_M.png",
-		"name": "Pokémon_Breeder_M",
+	"Pokemon_Breeder_M": {
+		"url": "Other/Pokemon_Breeder_M.png",
+		"name": "Pokemon_Breeder_M",
 		"keyword": ["Other"]
 	},
-	"Pokémon_Breeder_M_ORAS": {
-		"url": "Other/Pokémon_Breeder_M_ORAS.png",
-		"name": "Pokémon_Breeder_M_ORAS",
+	"Pokemon_Breeder_M_ORAS": {
+		"url": "Other/Pokemon_Breeder_M_ORAS.png",
+		"name": "Pokemon_Breeder_M_ORAS",
 		"keyword": ["Other"]
 	},
-	"Pokémon_Ranger_F": {
-		"url": "Other/Pokémon_Ranger_F.png",
-		"name": "Pokémon_Ranger_F",
+	"Pokemon_Ranger_F": {
+		"url": "Other/Pokemon_Ranger_F.png",
+		"name": "Pokemon_Ranger_F",
 		"keyword": ["Other"]
 	},
-	"Pokémon_Ranger_F_ORAS": {
-		"url": "Other/Pokémon_Ranger_F_ORAS.png",
-		"name": "Pokémon_Ranger_F_ORAS",
+	"Pokemon_Ranger_F_ORAS": {
+		"url": "Other/Pokemon_Ranger_F_ORAS.png",
+		"name": "Pokemon_Ranger_F_ORAS",
 		"keyword": ["Other"]
 	},
-	"Pokémon_Ranger_M": {
-		"url": "Other/Pokémon_Ranger_M.png",
-		"name": "Pokémon_Ranger_M",
+	"Pokemon_Ranger_M": {
+		"url": "Other/Pokemon_Ranger_M.png",
+		"name": "Pokemon_Ranger_M",
 		"keyword": ["Other"]
 	},
-	"Pokémon_Ranger_M_ORAS": {
-		"url": "Other/Pokémon_Ranger_M_ORAS.png",
-		"name": "Pokémon_Ranger_M_ORAS",
+	"Pokemon_Ranger_M_ORAS": {
+		"url": "Other/Pokemon_Ranger_M_ORAS.png",
+		"name": "Pokemon_Ranger_M_ORAS",
 		"keyword": ["Other"]
 	},
-	"Poké_Fan_F": {
-		"url": "Other/Poké_Fan_F.png",
-		"name": "Poké_Fan_F",
+	"Poke_Fan_F": {
+		"url": "Other/Poke_Fan_F.png",
+		"name": "Poke_Fan_F",
 		"keyword": ["Other"]
 	},
-	"Poké_Fan_F_ORAS": {
-		"url": "Other/Poké_Fan_F_ORAS.png",
-		"name": "Poké_Fan_F_ORAS",
+	"Poke_Fan_F_ORAS": {
+		"url": "Other/Poke_Fan_F_ORAS.png",
+		"name": "Poke_Fan_F_ORAS",
 		"keyword": ["Other"]
 	},
-	"Poké_Fan_M": {
-		"url": "Other/Poké_Fan_M.png",
-		"name": "Poké_Fan_M",
+	"Poke_Fan_M": {
+		"url": "Other/Poke_Fan_M.png",
+		"name": "Poke_Fan_M",
 		"keyword": ["Other"]
 	},
-	"Poké_Fan_M_ORAS": {
-		"url": "Other/Poké_Fan_M_ORAS.png",
-		"name": "Poké_Fan_M_ORAS",
+	"Poke_Fan_M_ORAS": {
+		"url": "Other/Poke_Fan_M_ORAS.png",
+		"name": "Poke_Fan_M_ORAS",
 		"keyword": ["Other"]
 	},
-	"Poké_Maniac": {
-		"url": "Other/Poké_Maniac.png",
-		"name": "Poké_Maniac",
+	"Poke_Maniac": {
+		"url": "Other/Poke_Maniac.png",
+		"name": "Poke_Maniac",
 		"keyword": ["Other"]
 	},
 	"Preschooler_F": {
@@ -1584,19 +1584,44 @@ var trainer = {
 		"name": "Young_Couple",
 		"keyword": ["Other"]
 	},
-	"trainer-bug-normal": {
-		"url": "Extra/trainer-bug-normal.png",
-		"name": "trainer-bug-normal",
+	"trainer-gym-bug-normal": {
+		"url": "Extra/trainer-gym-bug-normal.png",
+		"name": "trainer-gym-bug-normal",
 		"keyword": ["Extra"]
 	},
-	"trainer-dark-ghost": {
-		"url": "Extra/trainer-dark-ghost.png",
-		"name": "trainer-dark-ghost",
+	"trainer-gym-dark-ghost": {
+		"url": "Extra/trainer-gym-dark-ghost.png",
+		"name": "trainer-gym-dark-ghost",
 		"keyword": ["Extra"]
 	},
-	"trainer-electric-dragon": {
-		"url": "Extra/trainer-electric-dragon.png",
-		"name": "trainer-electric-dragon",
+	"trainer-gym-electric-dragon": {
+		"url": "Extra/trainer-gym-electric-dragon.png",
+		"name": "trainer-gym-electric-dragon",
+		"keyword": ["Extra"]
+	},
+	"trainer-gym-fighting-rock": {
+		"url": "Extra/trainer-gym-fighting-rock.png",
+		"name": "trainer-gym-fighting-rock",
+		"keyword": ["Extra"]
+	},
+	"trainer-gym-fire-ice": {
+		"url": "Extra/trainer-gym-fire-ice.png",
+		"name": "trainer-gym-fire-ice",
+		"keyword": ["Extra"]
+	},
+	"trainer-gym-flying-water": {
+		"url": "Extra/trainer-gym-flying-water.png",
+		"name": "trainer-gym-flying-water",
+		"keyword": ["Extra"]
+	},
+	"trainer-gym-ground-fairy": {
+		"url": "Extra/trainer-gym-ground-fairy.png",
+		"name": "trainer-gym-ground-fairy",
+		"keyword": ["Extra"]
+	},
+	"trainer-gym-psychic-steel": {
+		"url": "Extra/trainer-gym-psychic-steel.png",
+		"name": "trainer-gym-psychic-steel",
 		"keyword": ["Extra"]
 	},
 	"trainer-elite-hoenn": {
@@ -1622,31 +1647,6 @@ var trainer = {
 	"trainer-elite-unova": {
 		"url": "Extra/trainer-elite-unova.png",
 		"name": "trainer-elite-unova",
-		"keyword": ["Extra"]
-	},
-	"trainer-fighting-rock": {
-		"url": "Extra/trainer-fighting-rock.png",
-		"name": "trainer-fighting-rock",
-		"keyword": ["Extra"]
-	},
-	"trainer-fire-ice": {
-		"url": "Extra/trainer-fire-ice.png",
-		"name": "trainer-fire-ice",
-		"keyword": ["Extra"]
-	},
-	"trainer-flying-water": {
-		"url": "Extra/trainer-flying-water.png",
-		"name": "trainer-flying-water",
-		"keyword": ["Extra"]
-	},
-	"trainer-ground-fairy": {
-		"url": "Extra/trainer-ground-fairy.png",
-		"name": "trainer-ground-fairy",
-		"keyword": ["Extra"]
-	},
-	"trainer-psychic-steel": {
-		"url": "Extra/trainer-psychic-steel.png",
-		"name": "trainer-psychic-steel",
 		"keyword": ["Extra"]
 	},
 }

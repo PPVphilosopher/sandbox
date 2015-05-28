@@ -29,16 +29,30 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<div id="trainer-preview"></div>
 						<div id="trainer-select">
 							<div class="col-md-6">
 								<select id="select-category">
 						        	<option value="">Select trainer category</option>
 								</select>
+								<p id="selected-trainer-name"></p>
+							</div>
+							<div class="col-md-6">
+								<div id="selected-trainer"></div>
 							</div>
 							<div class="col-md-12">
-								<div id="div-trainer"></div>
+								<div id="div-trainer" class="hidden"></div>
 							</div>
+						</div>
+						<div id="card-select">
+							<div class="col-md-6">
+								<div id="selected-top"></div>
+								<div id="div-top" class="hidden"></div>
+							</div>
+							<div class="col-md-6">
+								<div id="selected-bottom"></div>
+								<div id="div-bottom" class="hidden"></div>
+							</div>
+							<div class="clearfix"></div>
 						</div>
 					</div>
 				</div>
@@ -168,8 +182,10 @@
 		</div>
 		<script src="js-lib/female_ratio.js"></script>
 		<script src="js-lib/pokemon_pic.js"></script>
+		<script src="js-lib/trainer_pic.js"></script>
 		<script src="js-lib/varient.js"></script>
 		<script src="js-lib/name.js"></script>
+		<script src="js-lib/bg.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>

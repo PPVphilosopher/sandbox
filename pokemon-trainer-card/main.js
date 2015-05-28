@@ -87,7 +87,74 @@ $(document).ready(function () {
 
 	$('#select-category').on('change', function () {
 		var selected = $(this).val();
+		if (selected == "") {
+			$('#div-trainer').html(null).addClass('hidden');
+		} else {
+			var preview_target = $('#div-trainer').html(null).removeClass('hidden');
+			$.each(trainer, function (key, val) {
+				if (val.keyword.indexOf(selected) > -1) {
+					var trainer = $('<img src="pic/trainer-full-resize/' + val.url + '" title="' + val.name + '" />').appendTo(preview_target);
+					trainer.on('click', function () {
+						$('#div-trainer').addClass('hidden');
+						$('#selected-trainer').html(trainer.clone());
+						$('#selected-trainer').data('url', val.url);
+						$('#selected-trainer-name').html(val.name);
+					});
+				}
+			});
+		}
 	});
+
+	$('#selected-trainer').on('click', function () {
+		var target = $('#div-trainer');
+		if (target.hasClass('hidden')) {
+			target.removeClass('hidden');
+		} else {
+			target.addClass('hidden');
+		}
+	});
+
+	$('#selected-top').on('click', function () {
+		var target = $('#div-top');
+		if (target.hasClass('hidden')) {
+			target.removeClass('hidden');
+		} else {
+			target.addClass('hidden');
+		}
+	});
+
+	$.each(bg_top, function (key, val) {
+		var target = $('#div-top');
+		var new_top = $('<img src="pic/card/' + val.url_mini + '" title="' + val.name + '" />').appendTo(target);
+		new_top.on('click', function () {
+			var preview = $('#selected-top').html(new_top.clone());
+			$('#selected-top').data('code', key);
+			target.addClass('hidden');
+		});
+	});
+
+	$('#div-top img:first-child').trigger('click');
+
+	$('#selected-bottom').on('click', function () {
+		var target = $('#div-bottom');
+		if (target.hasClass('hidden')) {
+			target.removeClass('hidden');
+		} else {
+			target.addClass('hidden');
+		}
+	});
+
+	$.each(bg_bottom, function (key, val) {
+		var target = $('#div-bottom');
+		var new_bottom = $('<img src="pic/card/' + val.url_mini + '" title="' + val.name + '" />').appendTo(target);
+		new_bottom.on('click', function () {
+			var preview = $('#selected-bottom').html(new_bottom.clone());
+			$('#selected-bottom').data('code', key);
+			target.addClass('hidden');
+		});
+	});
+
+	$('#div-bottom img:first-child').trigger('click');
 
 	$('#select-gender, #select-form').prop('disabled', true);
 	$('#select-pokemon, #select-gender, #select-form, #select-category').selectize();

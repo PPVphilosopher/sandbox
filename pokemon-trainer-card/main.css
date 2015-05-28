@@ -71,3 +71,56 @@
 #trainer-select {
 	margin-top: 20px;
 }
+.dd-dragel {
+	display: none;
+}
+#div-trainer {
+	max-height: 360px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow-y: auto;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+}
+#div-trainer img {
+	cursor: pointer;
+}
+#div-trainer img:hover {
+	background-color: #eee;
+}
+#selected-trainer {
+	text-align: center;
+}
+#selected-trainer img {
+	border: 2px solid #ccc;
+	cursor: pointer;
+}
+#selected-trainer-name {
+	padding: 5px;
+	font-weight: bold;
+	text-align: right;
+}
+#card-select {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#card-select >.col-md-6 {
+	margin-top: 20px;
+	text-align: center;
+}
+#selected-top img, #selected-bottom img {
+	border: 2px solid #ccc;
+	cursor: pointer;
+}
+#div-top, #div-bottom {
+	max-height: 360px;
+	margin-top: 20px;
+	overflow-y: auto;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+#div-top img, #div-bottom img{
+	margin-top: 10px;
+	cursor: pointer;
+}
