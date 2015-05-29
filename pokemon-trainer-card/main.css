@@ -111,6 +111,7 @@
 #selected-top img, #selected-bottom img {
 	border: 2px solid #ccc;
 	cursor: pointer;
+	display: inline;
 }
 #div-top, #div-bottom {
 	max-height: 360px;
@@ -123,4 +124,14 @@
 #div-top img, #div-bottom img{
 	margin-top: 10px;
 	cursor: pointer;
+	display: inline;
+}
+#card {
+	text-align: center;
+}
+#cardCanvas {
+	border: 3px solid #ccc;
+}
+#card-generate {
+	padding: 20px;
 }

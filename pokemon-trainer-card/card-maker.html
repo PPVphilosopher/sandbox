@@ -16,7 +16,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6" id="card">
-					<div class="clearfix">card</div>
+					<div class="clearfix">
+						<div id="junk"></div>
+						<canvas id="cardCanvas" width="360" height="480"></canvas>
+						<div class="col-md-12" id="card-generate">
+							<input type="text" id="card-code"></input>
+							<a href="javascript:void(0)" class="btn btn-info" id="import_button">import</a>
+							<a href="javascript:void(0)" class="btn btn-success" id="generate_button">generate</a>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6" id="trainer">
 					<div class="clearfix">
@@ -62,93 +70,93 @@
 				<div class="col-md-6" id="badge">
 					<div class="clearfix">
 						<div class="col-md-3">
-							<input type="checkbox" id="badge-01"/>
+							<input type="checkbox" id="badge-01" value="1"/>
 							<label for="badge-01">
 								<p>Ground/Fairy</p>
-								<img src="pic/badge/ground-fairy.png" class="img-responsive">
+								<img src="pic/badge/gym-ground-fairy.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-3">
-							<input type="checkbox" id="badge-02"/>
+							<input type="checkbox" id="badge-02" value="2"/>
 							<label for="badge-02">
 								<p>Fighting/Rock</p>
-								<img src="pic/badge/fighting-rock.png" class="img-responsive">
+								<img src="pic/badge/gym-fighting-rock.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-3">
-							<input type="checkbox" id="badge-03"/>
+							<input type="checkbox" id="badge-03" value="4"/>
 							<label for="badge-03">
 								<p>Psychic/Steel</p>
-								<img src="pic/badge/psychic-steel.png" class="img-responsive">
+								<img src="pic/badge/gym-psychic-steel.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-3">
-							<input type="checkbox" id="badge-04"/>
+							<input type="checkbox" id="badge-04" value="8"/>
 							<label for="badge-04">
 								<p>Fire/Ice</p>
-								<img src="pic/badge/fire-ice.png" class="img-responsive">
+								<img src="pic/badge/gym-fire-ice.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-3">
-							<input type="checkbox" id="badge-05"/>
+							<input type="checkbox" id="badge-05" value="16"/>
 							<label for="badge-05">
 								<p>Flying/Water</p>
-								<img src="pic/badge/flying-water.png" class="img-responsive">
+								<img src="pic/badge/gym-flying-water.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-3">
-							<input type="checkbox" id="badge-06"/>
+							<input type="checkbox" id="badge-06" value="32"/>
 							<label for="badge-06">
 								<p>Dark/Ghost</p>
-								<img src="pic/badge/dark-ghost.png" class="img-responsive">
+								<img src="pic/badge/gym-dark-ghost.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-3">
-							<input type="checkbox" id="badge-07"/>
+							<input type="checkbox" id="badge-07" value="64"/>
 							<label for="badge-07">
 								<p>Bug/Normal</p>
-								<img src="pic/badge/bug-normal.png" class="img-responsive">
+								<img src="pic/badge/gym-bug-normal.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-3">
-							<input type="checkbox" id="badge-08"/>
+							<input type="checkbox" id="badge-08" value="128"/>
 							<label for="badge-08">
 								<p>Electric/Dragon</p>
-								<img src="pic/badge/electric-dragon.png" class="img-responsive">
+								<img src="pic/badge/gym-electric-dragon.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-12 text-center m-b-m-120 z-2">
-							<input type="checkbox" id="elite-1"/>
+							<input type="checkbox" id="elite-1" value="256"/>
 							<label for="elite-1">
 								<p>Johto Elite</p>
-								<img src="pic/badge/elite-johto-crop.png" class="img-responsive">
+								<img src="pic/badge/elite-johto.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-6 text-right m-b-m-20">
-							<input type="checkbox" id="elite-2"/>
+							<input type="checkbox" id="elite-2" value="512"/>
 							<label for="elite-2">
 								<p class="text-left">Kalos Elite</p>
-								<img src="pic/badge/elite-kalos-crop.png" class="img-responsive">
+								<img src="pic/badge/elite-kalos.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-6 m-b-m-20">
-							<input type="checkbox" id="elite-3"/>
+							<input type="checkbox" id="elite-3" value="1024"/>
 							<label for="elite-3">
 								<p class="text-right">Hoenn Elite</p>
-								<img src="pic/badge/elite-hoenn-crop.png" class="img-responsive">
+								<img src="pic/badge/elite-hoenn.png" class="img-responsive">
 							</label>
 						</div>
 						<div class="col-md-6 text-right">
-							<input type="checkbox" id="elite-4"/>
+							<input type="checkbox" id="elite-4" value="2048"/>
 							<label for="elite-4">
-								<img src="pic/badge/elite-unova-crop.png" class="img-responsive">
+								<img src="pic/badge/elite-unova.png" class="img-responsive">
 								<p class="text-left">Unova Elite</p>
 							</label>
 						</div>
 						<div class="col-md-6">
-							<input type="checkbox" id="elite-5"/>
+							<input type="checkbox" id="elite-5" value="4096"/>
 							<label for="elite-5">
-								<img src="pic/badge/elite-sinnoh-crop.png" class="img-responsive">
+								<img src="pic/badge/elite-sinnoh.png" class="img-responsive">
 								<p class="text-right">Sinnoh Elite</p>
 							</label>
 						</div>
@@ -185,6 +193,7 @@
 		<script src="js-lib/pokemon_pic.js"></script>
 		<script src="js-lib/trainer_pic.js"></script>
 		<script src="js-lib/varient.js"></script>
+		<script src="js-lib/badge.js"></script>
 		<script src="js-lib/name.js"></script>
 		<script src="js-lib/bg.js"></script>
 		<script src="main.js"></script>

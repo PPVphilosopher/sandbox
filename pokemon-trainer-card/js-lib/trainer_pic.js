@@ -1584,69 +1584,69 @@ var trainer = {
 		"name": "Young_Couple",
 		"keyword": ["Other"]
 	},
-	"trainer-gym-bug-normal": {
-		"url": "Extra/trainer-gym-bug-normal.png",
-		"name": "trainer-gym-bug-normal",
-		"keyword": ["Extra"]
-	},
-	"trainer-gym-dark-ghost": {
-		"url": "Extra/trainer-gym-dark-ghost.png",
-		"name": "trainer-gym-dark-ghost",
-		"keyword": ["Extra"]
-	},
-	"trainer-gym-electric-dragon": {
-		"url": "Extra/trainer-gym-electric-dragon.png",
-		"name": "trainer-gym-electric-dragon",
-		"keyword": ["Extra"]
-	},
-	"trainer-gym-fighting-rock": {
-		"url": "Extra/trainer-gym-fighting-rock.png",
-		"name": "trainer-gym-fighting-rock",
-		"keyword": ["Extra"]
-	},
-	"trainer-gym-fire-ice": {
-		"url": "Extra/trainer-gym-fire-ice.png",
-		"name": "trainer-gym-fire-ice",
-		"keyword": ["Extra"]
-	},
-	"trainer-gym-flying-water": {
-		"url": "Extra/trainer-gym-flying-water.png",
-		"name": "trainer-gym-flying-water",
-		"keyword": ["Extra"]
-	},
-	"trainer-gym-ground-fairy": {
-		"url": "Extra/trainer-gym-ground-fairy.png",
-		"name": "trainer-gym-ground-fairy",
-		"keyword": ["Extra"]
-	},
-	"trainer-gym-psychic-steel": {
-		"url": "Extra/trainer-gym-psychic-steel.png",
-		"name": "trainer-gym-psychic-steel",
-		"keyword": ["Extra"]
-	},
-	"trainer-elite-hoenn": {
-		"url": "Extra/trainer-elite-hoenn.png",
-		"name": "trainer-elite-hoenn",
-		"keyword": ["Extra"]
-	},
-	"trainer-elite-johto": {
-		"url": "Extra/trainer-elite-johto.png",
-		"name": "trainer-elite-johto",
-		"keyword": ["Extra"]
-	},
-	"trainer-elite-kalos": {
-		"url": "Extra/trainer-elite-kalos.png",
-		"name": "trainer-elite-kalos",
-		"keyword": ["Extra"]
-	},
-	"trainer-elite-sinnoh": {
-		"url": "Extra/trainer-elite-sinnoh.png",
-		"name": "trainer-elite-sinnoh",
-		"keyword": ["Extra"]
-	},
-	"trainer-elite-unova": {
-		"url": "Extra/trainer-elite-unova.png",
-		"name": "trainer-elite-unova",
-		"keyword": ["Extra"]
-	},
+	// "trainer-gym-bug-normal": {
+	// 	"url": "Extra/trainer-gym-bug-normal.png",
+	// 	"name": "trainer-gym-bug-normal",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-gym-dark-ghost": {
+	// 	"url": "Extra/trainer-gym-dark-ghost.png",
+	// 	"name": "trainer-gym-dark-ghost",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-gym-electric-dragon": {
+	// 	"url": "Extra/trainer-gym-electric-dragon.png",
+	// 	"name": "trainer-gym-electric-dragon",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-gym-fighting-rock": {
+	// 	"url": "Extra/trainer-gym-fighting-rock.png",
+	// 	"name": "trainer-gym-fighting-rock",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-gym-fire-ice": {
+	// 	"url": "Extra/trainer-gym-fire-ice.png",
+	// 	"name": "trainer-gym-fire-ice",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-gym-flying-water": {
+	// 	"url": "Extra/trainer-gym-flying-water.png",
+	// 	"name": "trainer-gym-flying-water",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-gym-ground-fairy": {
+	// 	"url": "Extra/trainer-gym-ground-fairy.png",
+	// 	"name": "trainer-gym-ground-fairy",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-gym-psychic-steel": {
+	// 	"url": "Extra/trainer-gym-psychic-steel.png",
+	// 	"name": "trainer-gym-psychic-steel",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-elite-hoenn": {
+	// 	"url": "Extra/trainer-elite-hoenn.png",
+	// 	"name": "trainer-elite-hoenn",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-elite-johto": {
+	// 	"url": "Extra/trainer-elite-johto.png",
+	// 	"name": "trainer-elite-johto",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-elite-kalos": {
+	// 	"url": "Extra/trainer-elite-kalos.png",
+	// 	"name": "trainer-elite-kalos",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-elite-sinnoh": {
+	// 	"url": "Extra/trainer-elite-sinnoh.png",
+	// 	"name": "trainer-elite-sinnoh",
+	// 	"keyword": ["Extra"]
+	// },
+	// "trainer-elite-unova": {
+	// 	"url": "Extra/trainer-elite-unova.png",
+	// 	"name": "trainer-elite-unova",
+	// 	"keyword": ["Extra"]
+	// },
 }

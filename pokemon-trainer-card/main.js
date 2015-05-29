@@ -80,7 +80,7 @@ $(document).ready(function () {
 		form_select.selectize();
 	});
 
-	var category = ['Kanto&Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Other', 'Extra'];
+	var category = ['Kanto&Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Other'/*, 'Extra'*/];
 	$.each(category, function (key, val) {
 		$('#select-category').append('<option value="' + val + '">' + val + '</option>');
 	});
@@ -97,7 +97,7 @@ $(document).ready(function () {
 					trainer.on('click', function () {
 						$('#div-trainer').addClass('hidden');
 						$('#selected-trainer').html(trainer.clone());
-						$('#selected-trainer').data('url', val.url);
+						$('#selected-trainer').data({ 'url': val.url, 'key': key });
 						$('#selected-trainer-name').html(val.name);
 					});
 				}
@@ -125,7 +125,7 @@ $(document).ready(function () {
 
 	$.each(bg_top, function (key, val) {
 		var target = $('#div-top');
-		var new_top = $('<img src="pic/card/' + val.url_mini + '" title="' + val.name + '" />').appendTo(target);
+		var new_top = $('<img src="pic/card/' + val.url_mini + '" title="' + val.name + '" class="img-responsive" />').appendTo(target);
 		new_top.on('click', function () {
 			var preview = $('#selected-top').html(new_top.clone());
 			$('#selected-top').data('code', key);
@@ -146,7 +146,7 @@ $(document).ready(function () {
 
 	$.each(bg_bottom, function (key, val) {
 		var target = $('#div-bottom');
-		var new_bottom = $('<img src="pic/card/' + val.url_mini + '" title="' + val.name + '" />').appendTo(target);
+		var new_bottom = $('<img src="pic/card/' + val.url_mini + '" title="' + val.name + '" class="img-responsive" />').appendTo(target);
 		new_bottom.on('click', function () {
 			var preview = $('#selected-bottom').html(new_bottom.clone());
 			$('#selected-bottom').data('code', key);
@@ -162,6 +162,140 @@ $(document).ready(function () {
         group: 0
     });
 
+    $('#import_button').on('click', function () {
+    	var code = decode($('#card-code').val());
+
+    	var data = code.split(',');
+    	// 'name,fc,trainer,top,bottom,badge,pokemon'
+
+    	$('#trainer-info [name="name"]').val(data[0]);
+    	$('#trainer-info [name="fc"]').val(data[1]);
+
+    	$('#selected-trainer').html('<img src="pic/trainer-full-resize/' + trainer[data[2]].url + '" title="' + data[2] + '" />');
+    	$('#selected-trainer-name').html(data[2]);
+    	$('#selected-trainer').data({ url: trainer[data[2]].url, key: data[2] });
+
+    	$('#selected-top').html('<img src="pic/card/' + bg_top[data[3]].url_mini + '" title="' + bg_top[data[3]].name + '" />');
+    	$('#selected-top').data({ code: data[3] });
+
+    	$('#selected-bottom').html('<img src="pic/card/' + bg_bottom[data[4]].url_mini + '" title="' + bg_bottom[data[4]].name + '" />');
+    	$('#selected-bottom').data({ code: data[4] });
+
+    	var badge_get = parseInt(data[5]);
+    	for(var i = 1; i <= 4096; i *= 2) {
+			$('#badge [value="' + i + '"]').prop('checked', (badge_get | i )== badge_get);
+			$('#badge [value="' + i + '"]').trigger('change');
+    	}
+
+    	var pokemon_container = $('#selected .dd-list').html(null);
+    	var pokemon_get = data[6].match(/.{1,5}/g);
+    	$.each(pokemon_get, function (key, val) {
+    		var pic = pokemon_pic[val.substr(0, 3)][val.substr(3, 1)][val.substr(4, 1)];
+    		var new_pokemon = $('<li class="dd-item"></li>').appendTo(pokemon_container);
+    		new_pokemon.append(
+    			'<a href="javascript:void(0)" class="btn btn-danger btn-sm pull-right">delete</a>' +
+    			'<div class="selected-pokemon dd-handle"><img src="pic/icon/' + pic.picicon + '"> ' + pic.name + ' - ' + ((val.substr(3, 1) == 'f')? 'Female' : ((val.substr(3, 1)) == 'm')? 'Male' : 'Genderless') + '</div>'
+    		);
+    		new_pokemon.find('.btn-danger').on('click', function () {
+    			$(this).closest('li').remove();
+    		});
+    		new_pokemon.data('code', val);
+    	});
+
+    	drawCanvas(code);
+    });
+
+    $('#generate_button').on('click', function () {
+    	drawCanvas(getCode());
+    });
+
+    function drawCanvas (code) {
+    	var junk = $('#junk');
+    	var c = document.getElementById("cardCanvas");
+		var ctx = c.getContext("2d");
+
+		var data = code.split(',');
+    	// 'name,fc,trainer,top,bottom,badge,pokemon'
+
+    	junk.append($('<img id="junk-top" src="pic/card/' + bg_top[data[3]].url + '"/>'));
+    	ctx.drawImage($('#junk-top')[0], 0, 0);
+
+    	junk.append($('<img id="junk-bottom" src="pic/card/' + bg_bottom[data[4]].url + '"/>'));
+    	ctx.drawImage($('#junk-bottom')[0], 0, 240);
+
+    	junk.append($('<img id="junk-trainer" src="pic/trainer-full/' + trainer[data[2]].url + '"/>'));
+    	ctx.drawImage($('#junk-trainer')[0], 0, 0);
+
+    	junk.append($('<img id="junk-overlay" src="pic/card/' + bg_top[data[3]].overlay + '"/>'));
+    	ctx.drawImage($('#junk-overlay')[0], 0, 0);
+
+		ctx.font = "18px Tahoma";
+		ctx.fillStyle = "#FFFFFF";
+		ctx.fillText(data[0], 10, 27);
+		ctx.fillText(data[1], 10, 57);
+
+    	var badge_get = parseInt(data[5]);
+    	for(var i = 1; i <= 4096; i *= 2) {
+    		if ((badge_get | i )== badge_get) {
+    			junk.append($('<img id="junk-badge-' + i + '" src="pic/badge/' + badge[i].card_url + '"/>'));
+		    	ctx.drawImage($('#junk-badge-' + i + '')[0], 0, 240);
+    		}
+    	}
+
+    	var pokemon_coordinate = {
+    		0: { x: 16, y: 76 },
+    		1: { x: 60, y: 76 },
+    		2: { x: 16, y: 114 },
+    		3: { x: 60, y: 114 },
+    		4: { x: 16, y: 152 },
+    		5: { x: 60, y: 152 },
+    		6: { x: 16, y: 204 },
+    		7: { x: 60, y: 204 },
+    		8: { x: 104, y: 204 },
+    		9: { x: 148, y: 204 },
+    		10: { x: 192, y: 204 },
+    		11: { x: 236, y: 204 },
+    		12: { x: 280, y: 204 },
+    		13: { x: 324, y: 204 },
+    	}
+    	var pokemon_get = data[6].match(/.{1,5}/g);
+    	$.each(pokemon_get, function (key, val) {
+    		var pic = pokemon_pic[val.substr(0, 3)][val.substr(3, 1)][val.substr(4, 1)].picicon;
+			junk.append($('<img id="junk-pokemon-' + key + '" src="pic/icon/' + pic + '"/>'));
+			var w = parseInt(($('#junk-pokemon-' + key + '')[0].naturalWidth - 32) / 2);
+			var h = parseInt(($('#junk-pokemon-' + key + '')[0].naturalHeight - 32) / 2);
+	    	ctx.drawImage($('#junk-pokemon-' + key + '')[0], pokemon_coordinate[key].x - w, pokemon_coordinate[key].y - h);
+    	});
+
+    	junk.html(null);
+
+		$('#card-code').val(encode(code));
+    }
+
+    function getCode () {
+    	var badge = 0;
+    	$('#badge input[type="checkbox"]:checked').each(function () {
+    		var badge_val = parseInt($(this).val());
+    		console.log(badge_val)
+    		badge += badge_val;
+    	});
+
+    	var pokemon = "";
+    	$('#selected .dd-item').each(function () {
+    		pokemon += $(this).data('code');
+    	});
+
+    	var code = "" +
+    		$('#trainer [name="name"]').val() + ',' +
+    		$('#trainer [name="fc"]').val() + ',' +
+    		$('#selected-trainer').data('key') + ',' +
+    		$('#selected-top').data('code') + ',' +
+    		$('#selected-bottom').data('code') + ',' +
+    		badge + ',' +
+    		pokemon;
+    	return code;
+    }
+
     function encode(text) {
         if (!text) return text;
         text = text.toString();
@@ -174,7 +308,6 @@ $(document).ready(function () {
         var random = parseInt(new Date().getTime()) % lib_count;
         $.each(text, function (key, val) {
             var index_align = lib_align.indexOf(val);
-            console.log(key + ' ' + val + ' ' + index_align)
             if (index_align > -1) {
                 var target_shufle = (index_align + key + random) % lib_count;
                 encode += lib_shuffle[target_shufle];
