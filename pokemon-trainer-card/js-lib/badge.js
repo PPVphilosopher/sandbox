@@ -42,10 +42,10 @@ var badge = {
 		"value": 32
 	},
 	64: {
-		"name": "Bug/Normal",
-		"url": "gym-bug-normal.png",
-		"card_url": "gym-bug-normal-card.png",
-		"leader": "Jittarin Rojmahamongkol",
+		"name": "Bug/Poison",
+		"url": "gym-bug-poison.png",
+		"card_url": "gym-bug-poison-card.png",
+		"leader": "NoiNa Varanyoo",
 		"value": 64
 	},
 	128: {
@@ -59,7 +59,7 @@ var badge = {
 		"name": "Johto Elite",
 		"url": "elite-johto.png",
 		"card_url": "elite-johto-card.png",
-		"leader": "Pongsatorn Duangmang",
+		"leader": "Jittarin Rojmahamongkol",
 		"value": 256
 	},
 	512: {

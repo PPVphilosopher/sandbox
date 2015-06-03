@@ -1584,9 +1584,9 @@ var trainer = {
 		"name": "Young_Couple",
 		"keyword": ["Other"]
 	},
-	// "trainer-gym-bug-normal": {
-	// 	"url": "Extra/trainer-gym-bug-normal.png",
-	// 	"name": "trainer-gym-bug-normal",
+	// "trainer-gym-bug-poison": {
+	// 	"url": "Extra/trainer-gym-bug-poison.png",
+	// 	"name": "trainer-gym-bug-poison",
 	// 	"keyword": ["Extra"]
 	// },
 	// "trainer-gym-dark-ghost": {
