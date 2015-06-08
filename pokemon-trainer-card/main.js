@@ -80,7 +80,7 @@ $(document).ready(function () {
 		form_select.selectize();
 	});
 
-	var category = ['Kanto&Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Other'/*, 'Extra'*/];
+	var category = ['Kanto&Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Other', 'Extra'];
 	$.each(category, function (key, val) {
 		$('#select-category').append('<option value="' + val + '">' + val + '</option>');
 	});
