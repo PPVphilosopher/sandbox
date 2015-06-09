@@ -1651,37 +1651,37 @@ var trainer = {
 	// },
 	"Clair_Genderbend": {
 		"url": "Extra/Clair_Genderbend.png",
-		"name": "Clair_Genderbend",
+		"name": "Pokemon_Clair_Genderbend",
 		"keyword": ["Extra"]
 	},
 	"Erika_Genderbend": {
 		"url": "Extra/Erika_Genderbend.png",
-		"name": "Erika_Genderbend",
+		"name": "Pokemon_Erika_Genderbend",
 		"keyword": ["Extra"]
 	},
 	"Janine_Genderbend": {
 		"url": "Extra/Janine_Genderbend.png",
-		"name": "Janine_Genderbend",
+		"name": "Pokemon_Janine_Genderbend",
 		"keyword": ["Extra"]
 	},
 	"Jasmine_Genderbend": {
 		"url": "Extra/Jasmine_Genderbend.png",
-		"name": "Jasmine_Genderbend",
+		"name": "Pokemon_Jasmine_Genderbend",
 		"keyword": ["Extra"]
 	},
 	"Misty_Genderbend": {
 		"url": "Extra/Misty_Genderbend.png",
-		"name": "Misty_Genderbend",
+		"name": "Pokemon_Misty_Genderbend",
 		"keyword": ["Extra"]
 	},
 	"Sabrina_Genderbend": {
 		"url": "Extra/Sabrina_Genderbend.png",
-		"name": "Sabrina_Genderbend",
+		"name": "Pokemon_Sabrina_Genderbend",
 		"keyword": ["Extra"]
 	},
 	"Whitney_Genderbend": {
 		"url": "Extra/Whitney_Genderbend.png",
-		"name": "Whitney_Genderbend",
+		"name": "Pokemon_Whitney_Genderbend",
 		"keyword": ["Extra"]
 	},
 }
