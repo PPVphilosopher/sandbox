@@ -5,6 +5,12 @@ var bg_top = {
 		"url_mini": "t1-mini.png",
 		"overlay": "d1.png",
 	},
+	"t2": {
+		"name": "default 02 - Hard Mode",
+		"url": "t2.png",
+		"url_mini": "t2-mini.png",
+		"overlay": "d1.png",
+	},
 }
 
 var bg_bottom = {
@@ -12,6 +18,11 @@ var bg_bottom = {
 		"name": "default 01",
 		"url": "b1.png",
 		"url_mini": "b1-mini.png",
+	},
+	"b2": {
+		"name": "default 02 - Hard Mode",
+		"url": "b2.png",
+		"url_mini": "b2-mini.png",
 	},
 	// "b0": {
 	// 	"name": "no bottom card",

@@ -232,8 +232,10 @@ $(document).ready(function () {
     	junk.append($('<img id="junk-bottom" src="pic/card/' + bg_bottom[data[4]].url + '"/>'));
     	ctx.drawImage($('#junk-bottom')[0], 0, 240);
 
-    	junk.append($('<img id="junk-trainer" src="pic/trainer-full/' + trainer[data[2]].url + '"/>'));
-    	ctx.drawImage($('#junk-trainer')[0], 0, 0);
+    	if (trainer[data[2]]) {
+	    	junk.append($('<img id="junk-trainer" src="pic/trainer-full/' + trainer[data[2]].url + '"/>'));
+	    	ctx.drawImage($('#junk-trainer')[0], 0, 0);
+    	}
 
     	junk.append($('<img id="junk-overlay" src="pic/card/' + bg_top[data[3]].overlay + '"/>'));
     	ctx.drawImage($('#junk-overlay')[0], 0, 0);
@@ -268,13 +270,15 @@ $(document).ready(function () {
     		13: { x: 318, y: 204 },
     	}
     	var pokemon_get = data[6].match(/.{1,5}/g);
-    	$.each(pokemon_get, function (key, val) {
-    		var pic = pokemon_pic[val.substr(0, 3)][val.substr(3, 1)][val.substr(4, 1)].picicon;
-			junk.append($('<img id="junk-pokemon-' + key + '" src="pic/icon/' + pic + '"/>'));
-			var w = parseInt(($('#junk-pokemon-' + key + '')[0].naturalWidth - 32) / 2);
-			var h = parseInt(($('#junk-pokemon-' + key + '')[0].naturalHeight - 32) / 2);
-	    	ctx.drawImage($('#junk-pokemon-' + key + '')[0], pokemon_coordinate[key].x - w, pokemon_coordinate[key].y - h);
-    	});
+    	if (pokemon_get) {
+	    	$.each(pokemon_get, function (key, val) {
+	    		var pic = pokemon_pic[val.substr(0, 3)][val.substr(3, 1)][val.substr(4, 1)].picicon;
+				junk.append($('<img id="junk-pokemon-' + key + '" src="pic/icon/' + pic + '"/>'));
+				var w = parseInt(($('#junk-pokemon-' + key + '')[0].naturalWidth - 32) / 2);
+				var h = parseInt(($('#junk-pokemon-' + key + '')[0].naturalHeight - 32) / 2);
+		    	ctx.drawImage($('#junk-pokemon-' + key + '')[0], pokemon_coordinate[key].x - w, pokemon_coordinate[key].y - h);
+	    	});
+    	}
 
     	junk.html(null);
 
