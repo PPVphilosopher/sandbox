@@ -85,7 +85,7 @@ $(document).ready(function () {
 		loadimage('pic/badge/' + badge[value].card_url);
 	});
 
-	var category = ['Kanto&Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Other', 'Extra'];
+	var category = ['Kanto&Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Other', 'Extra', 'Request'];
 	$.each(category, function (key, val) {
 		$('#select-category').append('<option value="' + val + '">' + val + '</option>');
 	});

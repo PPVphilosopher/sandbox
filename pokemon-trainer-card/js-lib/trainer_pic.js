@@ -1684,4 +1684,9 @@ var trainer = {
 		"name": "Pokemon_Whitney_Genderbend",
 		"keyword": ["Extra"]
 	},
+	"Aikawa_Kizuna": {
+		"url": "Request/Prunus_Girl_Aikawa_Kizuna.png",
+		"name": "Prunus_Girl_Aikawa_Kizuna",
+		"keyword": ["Request"]
+	},
 }
