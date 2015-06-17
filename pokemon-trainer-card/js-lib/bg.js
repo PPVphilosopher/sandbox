@@ -11,6 +11,12 @@ var bg_top = {
 		"url_mini": "t2-mini.png",
 		"overlay": "d1.png",
 	},
+	"mono-dragon": {
+		"name": "Mono type - Dragon",
+		"url": "mono-dragon.png",
+		"url_mini": "mono-dragon-mini.png",
+		"overlay": "d2.png",
+	},
 }
 
 var bg_bottom = {
