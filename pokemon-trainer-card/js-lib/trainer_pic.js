@@ -1689,4 +1689,9 @@ var trainer = {
 		"name": "Prunus_Girl_Aikawa_Kizuna",
 		"keyword": ["Request"]
 	},
+	"Pokesupe_Blue": {
+		"url": "Request/Pokesupe_Blue.png",
+		"name": "Pokesupe_Blue",
+		"keyword": ["Request"]
+	},
 }
