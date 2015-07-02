@@ -1694,4 +1694,9 @@ var trainer = {
 		"name": "Prunus_Girl_Aikawa_Kizuna",
 		"keyword": ["Request"]
 	},
+	"Penguin_Hut": {
+		"url": "Request/Penguin_Hut.png",
+		"name": "Penguin_Hut",
+		"keyword": ["Request"]
+	},
 }
