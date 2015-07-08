@@ -1699,4 +1699,9 @@ var trainer = {
 		"name": "Penguin_Hut",
 		"keyword": ["Request"]
 	},
+	"Dragonite_Trainer_Ek": {
+		"url": "Request/Dragonite_Trainer_Ek.png",
+		"name": "Dragonite_Trainer_Ek",
+		"keyword": ["Request"]
+	},
 }
