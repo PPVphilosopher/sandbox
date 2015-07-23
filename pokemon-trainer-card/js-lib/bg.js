@@ -11,6 +11,12 @@ var bg_top = {
 		"url_mini": "t2-mini.png",
 		"overlay": "d1.png",
 	},
+	"trophy": {
+		"name": "Champion trophy",
+		"url": "trophy.png",
+		"url_mini": "trophy-mini.png",
+		"overlay": "d2.png",
+	},
 	// "mono-bug": {
 	// 	"name": "Mono type - Bug",
 	// 	"url": "mono-bug.png",
