@@ -82,7 +82,7 @@ $(document).ready(function () {
 
 	$('#badge [type="checkbox"]').on('change', function () {
 		var value = parseInt($(this).val());
-		loadimage('pic/badge/' + badge[value].card_url);
+		loadimage('pic/brain-ribbon/' + ribbon[value].card_url);
 	});
 
 	var category = ['Kanto&Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Other', 'Extra', 'Request'];
@@ -246,10 +246,27 @@ $(document).ready(function () {
 		ctx.fillText(data[1], 10, 57);
 
     	var badge_get = parseInt(data[5]);
+    	var count = 0, get = 0, base = 0;
     	for (var i = 1; i <= 4096; i *= 2) {
+    		count++;
+			if (count == 1) base = i;
     		if ((badge_get | i ) == badge_get) {
-    			junk.append($('<img id="junk-badge-' + i + '" src="pic/badge/' + badge[i].card_url + '"/>'));
-		    	ctx.drawImage($('#junk-badge-' + i + '')[0], 0, 240);
+    			get++;
+    		}
+    		if (count == 3) {
+    			var pic = 0;
+    			switch (get) {
+    				case 1: pic = base; break;
+    				case 2: pic = base * 2; break;
+    				case 3: pic = base * 4; break;
+    			}
+    			if (pic) {
+	    			junk.append($('<img id="junk-badge-' + i + '" src="pic/brain-ribbon/' + ribbon[pic].card_url + '"/>'));
+			    	ctx.drawImage($('#junk-badge-' + i + '')[0], 0, 240);
+    			}
+    			count = 0;
+    			get = 0;
+    			base = 0;
     		}
     	}
 
@@ -316,7 +333,7 @@ $(document).ready(function () {
 
         var lib_count = 93;
         var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?\ "
-        var lib_shuffle = "nB\\N\&Ck3feMPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2GlytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@Y"
+        var lib_shuffle = "\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2GlytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@YnB\\N\&Ck3feMPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx"
 
         var random = parseInt(new Date().getTime()) % lib_count;
         $.each(text, function (key, val) {
@@ -339,7 +356,7 @@ $(document).ready(function () {
 
         var lib_count = 93;
         var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?\ "
-        var lib_shuffle = "nB\\N\&Ck3feMPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2GlytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@Y"
+        var lib_shuffle = "\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2GlytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@YnB\\N\&Ck3feMPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx"
 
         var random = lib_align.indexOf(text[0]);
         if (random < 0) return text;

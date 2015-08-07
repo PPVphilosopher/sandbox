@@ -1,4 +1,10 @@
 var bg_top = {
+	"t3": {
+		"name": "frontier default 01",
+		"url": "t3.png",
+		"url_mini": "t3-mini.png",
+		"overlay": "d2.png",
+	},
 	"t1": {
 		"name": "default 01",
 		"url": "t1.png",
@@ -128,6 +134,11 @@ var bg_top = {
 }
 
 var bg_bottom = {
+	"b3": {
+		"name": "frontier default 01",
+		"url": "b3.png",
+		"url_mini": "b3-mini.png",
+	},
 	"b1": {
 		"name": "default 01",
 		"url": "b1.png",
