@@ -1,0 +1,201 @@
+<html>
+	<head>
+		<title>Card Maker</title>
+	    <link rel="stylesheet" href="../lib/css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="../lib/css/jquery-ui.min.css" />
+	    <link rel="stylesheet" href="../lib/selectize/css/selectize.css">
+	    <link rel="stylesheet" href="main.css" />
+
+		<script src="../lib/js/jquery-1.11.1.min.js"></script>
+		<script src="../lib/js/bootstrap.min.js"></script>
+	    <script src="../lib/selectize/js/jquery.js"></script>
+	    <script src="../lib/selectize/js/selectize.js"></script>
+		<script src="../lib/js/jquery.nestable.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6" id="card">
+					<div class="clearfix">
+						<div id="junk"></div>
+						<canvas id="cardCanvas" width="360" height="480"></canvas>
+						<div class="col-md-12" id="card-generate">
+							<input type="text" id="card-code"></input>
+							<a href="javascript:void(0)" class="btn btn-info" id="import_button">import</a>
+							<a href="javascript:void(0)" class="btn btn-success" id="generate_button">generate</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6" id="trainer">
+					<div class="clearfix">
+						<div id="trainer-info">
+							<div class='col-md-6'>
+								<input type="text" name="name" placeholder="Player name">
+							</div>
+							<div class='col-md-6'>
+								<input type="text" name="fc" placeholder="Friend code">
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div id="trainer-select">
+							<div class="col-md-6">
+								<select id="select-category">
+						        	<option value="">Select trainer category</option>
+								</select>
+								<p id="selected-trainer-name"></p>
+							</div>
+							<div class="col-md-6">
+								<div id="selected-trainer"></div>
+							</div>
+							<div class="col-md-12">
+								<div id="div-trainer" class="hidden"></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div id="card-select">
+							<div class="col-md-6">
+								<div id="selected-top"></div>
+								<div id="div-top" class="hidden"></div>
+							</div>
+							<div class="col-md-6">
+								<div id="selected-bottom"></div>
+								<div id="div-bottom" class="hidden"></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6" id="badge">
+					<div class="clearfix">
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-01" value="1"/>
+							<label for="badge-01">
+								<p>Bug/Electric</p>
+								<img src="pic/badgeSS5/gym-bug-electric.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-02" value="2"/>
+							<label for="badge-02">
+								<p>Normal/Fairy</p>
+								<img src="pic/badgeSS5/gym-normal-fairy.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-03" value="4"/>
+							<label for="badge-03">
+								<p>Water/Ground</p>
+								<img src="pic/badgeSS5/gym-water-ground.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-04" value="8"/>
+							<label for="badge-04">
+								<p>Dark/Dragon</p>
+								<img src="pic/badgeSS5/gym-dark-dragon.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-05" value="16"/>
+							<label for="badge-05">
+								<p>Fire/Fighting</p>
+								<img src="pic/badgeSS5/gym-fire-fighting.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-06" value="32"/>
+							<label for="badge-06">
+								<p>Rock/Flying</p>
+								<img src="pic/badgeSS5/gym-rock-flying.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-07" value="64"/>
+							<label for="badge-07">
+								<p>Steel/Psychic</p>
+								<img src="pic/badgeSS5/gym-steel-psychic.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-3">
+							<input type="checkbox" id="badge-08" value="128"/>
+							<label for="badge-08">
+								<p>Grass/Poison</p>
+								<img src="pic/badgeSS5/gym-grass-poison.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-12 text-center m-b-m-120 z-2">
+							<input type="checkbox" id="elite-1" value="512"/>
+							<label for="elite-1">
+								<p>Hoenn Elite</p>
+								<img src="pic/badgeSS5/elite-hoenn.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-6 text-center m-b-m-20">
+							<input type="checkbox" id="elite-2" value="256"/>
+							<label for="elite-2">
+								<p class="text-left">Johto Elite</p>
+								<img src="pic/badgeSS5/elite-johto.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-6 text-center m-b-m-20">
+							<input type="checkbox" id="elite-3" value="1024"/>
+							<label for="elite-3">
+								<p class="text-right">Sinnoh Elite</p>
+								<img src="pic/badgeSS5/elite-sinnoh.png" class="img-responsive">
+							</label>
+						</div>
+						<div class="col-md-6 text-right">
+							<input type="checkbox" id="elite-4" value="4096"/>
+							<label for="elite-4">
+								<img src="pic/badgeSS5/elite-kalos.png" class="img-responsive">
+								<p class="text-left">Kalos Elite</p>
+							</label>
+						</div>
+						<div class="col-md-6">
+							<input type="checkbox" id="elite-5" value="2048"/>
+							<label for="elite-5">
+								<img src="pic/badgeSS5/elite-unova.png" class="img-responsive">
+								<p class="text-right">Unova Elite</p>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6" id="pokemon">
+					<div class="clearfix">
+						<div id="selected" class="col-md-12 dd">
+							<ol class="dd-list"></ol>
+						</div>
+						<div class="col-md-4">
+					        <select id="select-pokemon">
+					        	<option value="">Select pokemon</option>
+					        </select>
+						</div>
+						<div class="col-md-4">
+					        <select id="select-gender">
+					        	<option value="">Select gender</option>
+					        </select>
+						</div>
+						<div class="col-md-4">
+					        <select id="select-form">
+					        	<option value="">Select form</option>
+					        </select>
+						</div>
+						<div class="col-md-12">
+							<div id="select-preview"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js-lib/female_ratio.js"></script>
+		<script src="js-lib/pokemon_pic.js"></script>
+		<script src="js-lib/trainer_pic.js"></script>
+		<script src="js-lib/varient.js"></script>
+		<script src="js-lib/badge.js"></script>
+		<script src="js-lib/name.js"></script>
+		<script src="js-lib/bg.js"></script>
+		<script src="main-ss5.js"></script>
+	</body>
+</html>

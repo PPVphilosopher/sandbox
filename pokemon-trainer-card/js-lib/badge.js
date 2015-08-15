@@ -153,3 +153,84 @@ var ribbon = {
 		value: 2048
 	},
 }
+
+var badgeSS5 = {
+	1: {
+		name: "Bug/Electric",
+		url: "gym-bug-electric.png",
+		card_url: "gym-bug-electric-card.png",
+		value: 1
+	},
+	2: {
+		name: "Normal/Fairy",
+		url: "gym-normal-fairy.png",
+		card_url: "gym-normal-fairy-card.png",
+		value: 2
+	},
+	4: {
+		name: "Water/Ground",
+		url: "gym-water-ground.png",
+		card_url: "gym-water-ground-card.png",
+		value: 4
+	},
+	8: {
+		name: "Dark/Dragon",
+		url: "gym-dark-dragon.png",
+		card_url: "gym-dark-dragon-card.png",
+		value: 8
+	},
+	16: {
+		name: "Fire/Fighting",
+		url: "gym-fire-fighting.png",
+		card_url: "gym-fire-fighting-card.png",
+		value: 16
+	},
+	32: {
+		name: "Rock/Flying",
+		url: "gym-rock-flying.png",
+		card_url: "gym-rock-flying-card.png",
+		value: 32
+	},
+	64: {
+		name: "Steel/Psychic",
+		url: "gym-steel-psychic.png",
+		card_url: "gym-steel-psychic-card.png",
+		value: 64
+	},
+	128: {
+		name: "Grass/Poison",
+		url: "gym-grass-poison.png",
+		card_url: "gym-grass-poison-card.png",
+		value: 128
+	},
+	256: {
+		name: "Johto Elite",
+		url: "elite-johto.png",
+		card_url: "elite-johto-card.png",
+		value: 256
+	},
+	512: {
+		name: "Hoenn Elite",
+		url: "elite-hoenn.png",
+		card_url: "elite-hoenn-card.png",
+		value: 512
+	},
+	1024: {
+		name: "Sinnoh Elite",
+		url: "elite-sinnoh.png",
+		card_url: "elite-sinnoh-card.png",
+		value: 1024
+	},
+	2048: {
+		name: "Unova Elite",
+		url: "elite-unova.png",
+		card_url: "elite-unova-card.png",
+		value: 2048
+	},
+	4096: {
+		name: "Kalos Elite",
+		url: "elite-kalos.png",
+		card_url: "elite-kalos-card.png",
+		value: 4096
+	},
+}

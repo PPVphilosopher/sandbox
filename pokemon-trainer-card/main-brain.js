@@ -141,7 +141,8 @@ $(document).ready(function () {
 		});
 	});
 
-	$('#div-top img:first-child').trigger('click');
+	if ($('#div-top img[title="frontier default 01"]')[0]) $('#div-top img[title="frontier default 01"]').trigger('click');
+	else $('#div-top img:first-child').trigger('click');
 
 	$('#selected-bottom').on('click', function () {
 		var target = $('#div-bottom');
@@ -163,7 +164,8 @@ $(document).ready(function () {
 		});
 	});
 
-	$('#div-bottom img:first-child').trigger('click');
+	if ($('#div-bottom img[title="frontier default 01"]')[0]) $('#div-bottom img[title="frontier default 01"]').trigger('click');
+	else $('#div-bottom img:first-child').trigger('click');
 
 	$('#select-gender, #select-form').prop('disabled', true);
 	$('#select-pokemon, #select-gender, #select-form, #select-category').selectize();
