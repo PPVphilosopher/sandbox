@@ -1,1 +1,1 @@
-var troll_on = true;
+var troll_on = false;
