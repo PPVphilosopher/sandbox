@@ -10,4 +10,5 @@ if (troll_on) troll();
 
 function troll_off () {
 	$('body').replaceWith(backup);
+	init();
 }
