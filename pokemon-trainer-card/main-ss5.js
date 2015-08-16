@@ -1,5 +1,9 @@
 $(document).ready(function () {
+	if (troll_on) return false;
+	init();
+});
 
+function init () {
 	$.each(namelist, function (key, val) {
 		$('#select-pokemon').append('<option value="' + val.number + '">' + val.number + ' : ' + val.name + '</option>');
 	});
@@ -219,157 +223,150 @@ $(document).ready(function () {
     $('#generate_button').on('click', function () {
     	drawCanvas(getCode());
     });
+}
 
-    function drawCanvas (code) {
-    	var junk = $('#junk');
-    	var c = document.getElementById("cardCanvas");
-		var ctx = c.getContext("2d");
+function drawCanvas (code) {
+	var junk = $('#junk');
+	var c = document.getElementById("cardCanvas");
+	var ctx = c.getContext("2d");
 
-		var data = code.split(',');
-    	// 'name,fc,trainer,top,bottom,badge,pokemon'
+	var data = code.split(',');
+	// 'name,fc,trainer,top,bottom,badge,pokemon'
 
-    	junk.append($('<img id="junk-top" src="pic/card/' + bg_top[data[3]].url + '"/>'));
-    	ctx.drawImage($('#junk-top')[0], 0, 0);
+	junk.append($('<img id="junk-top" src="pic/card/' + bg_top[data[3]].url + '"/>'));
+	ctx.drawImage($('#junk-top')[0], 0, 0);
 
-    	junk.append($('<img id="junk-bottom" src="pic/card/' + bg_bottom[data[4]].url + '"/>'));
-    	ctx.drawImage($('#junk-bottom')[0], 0, 240);
+	junk.append($('<img id="junk-bottom" src="pic/card/' + bg_bottom[data[4]].url + '"/>'));
+	ctx.drawImage($('#junk-bottom')[0], 0, 240);
 
-    	if (trainer[data[2]]) {
-	    	junk.append($('<img id="junk-trainer" src="pic/trainer-full/' + trainer[data[2]].url + '"/>'));
-	    	ctx.drawImage($('#junk-trainer')[0], 0, 0);
-    	}
+	if (trainer[data[2]]) {
+    	junk.append($('<img id="junk-trainer" src="pic/trainer-full/' + trainer[data[2]].url + '"/>'));
+    	ctx.drawImage($('#junk-trainer')[0], 0, 0);
+	}
 
-    	junk.append($('<img id="junk-overlay" src="pic/card/' + bg_top[data[3]].overlay + '"/>'));
-    	ctx.drawImage($('#junk-overlay')[0], 0, 0);
+	junk.append($('<img id="junk-overlay" src="pic/card/' + bg_top[data[3]].overlay + '"/>'));
+	ctx.drawImage($('#junk-overlay')[0], 0, 0);
 
-		ctx.font = "18px Tahoma";
-		ctx.fillStyle = "#FFFFFF";
-		ctx.fillText(data[0], 10, 27);
-		ctx.fillText(data[1], 10, 57);
+	ctx.font = "18px Tahoma";
+	ctx.fillStyle = "#FFFFFF";
+	ctx.fillText(data[0], 10, 27);
+	ctx.fillText(data[1], 10, 57);
 
-    	var badge_get = parseInt(data[5]);
-    	for (var i = 1; i <= 4096; i *= 2) {
-    		if ((badge_get | i ) == badge_get) {
-    			junk.append($('<img id="junk-badge-' + i + '" src="pic/badgeSS5/' + badgeSS5[i].card_url + '"/>'));
-		    	ctx.drawImage($('#junk-badge-' + i + '')[0], 0, 240);
-    		}
-    	}
+	var badge_get = parseInt(data[5]);
+	for (var i = 1; i <= 4096; i *= 2) {
+		if ((badge_get | i ) == badge_get) {
+			junk.append($('<img id="junk-badge-' + i + '" src="pic/badgeSS5/' + badgeSS5[i].card_url + '"/>'));
+	    	ctx.drawImage($('#junk-badge-' + i + '')[0], 0, 240);
+		}
+	}
 
-    	var pokemon_coordinate = {
-    		0: { x: 16, y: 76 },
-    		1: { x: 60, y: 76 },
-    		2: { x: 16, y: 114 },
-    		3: { x: 60, y: 114 },
-    		4: { x: 16, y: 152 },
-    		5: { x: 60, y: 152 },
-    		6: { x: 10, y: 204 },
-    		7: { x: 54, y: 204 },
-    		8: { x: 98, y: 204 },
-    		9: { x: 142, y: 204 },
-    		10: { x: 186, y: 204 },
-    		11: { x: 230, y: 204 },
-    		12: { x: 274, y: 204 },
-    		13: { x: 318, y: 204 },
-    	}
-    	var pokemon_get = data[6].match(/.{1,5}/g);
-    	if (pokemon_get) {
-	    	$.each(pokemon_get, function (key, val) {
-	    		var pic = pokemon_pic[val.substr(0, 3)][val.substr(3, 1)][val.substr(4, 1)].picicon;
-				junk.append($('<img id="junk-pokemon-' + key + '" src="pic/icon/' + pic + '"/>'));
-				var w = parseInt(($('#junk-pokemon-' + key + '')[0].naturalWidth - 32) / 2);
-				var h = parseInt(($('#junk-pokemon-' + key + '')[0].naturalHeight - 32) / 2);
-		    	ctx.drawImage($('#junk-pokemon-' + key + '')[0], pokemon_coordinate[key].x - w, pokemon_coordinate[key].y - h);
-	    	});
-    	}
-
-    	junk.html(null);
-
-		$('#card-code').val(encode(code));
-    }
-
-    function getCode () {
-    	var badge = 0;
-    	$('#badge input[type="checkbox"]:checked').each(function () {
-    		var badge_val = parseInt($(this).val());
-    		console.log(badge_val)
-    		badge += badge_val;
+	var pokemon_coordinate = {
+		0: { x: 16, y: 76 },
+		1: { x: 60, y: 76 },
+		2: { x: 16, y: 114 },
+		3: { x: 60, y: 114 },
+		4: { x: 16, y: 152 },
+		5: { x: 60, y: 152 },
+		6: { x: 10, y: 204 },
+		7: { x: 54, y: 204 },
+		8: { x: 98, y: 204 },
+		9: { x: 142, y: 204 },
+		10: { x: 186, y: 204 },
+		11: { x: 230, y: 204 },
+		12: { x: 274, y: 204 },
+		13: { x: 318, y: 204 },
+	}
+	var pokemon_get = data[6].match(/.{1,5}/g);
+	if (pokemon_get) {
+    	$.each(pokemon_get, function (key, val) {
+    		var pic = pokemon_pic[val.substr(0, 3)][val.substr(3, 1)][val.substr(4, 1)].picicon;
+			junk.append($('<img id="junk-pokemon-' + key + '" src="pic/icon/' + pic + '"/>'));
+			var w = parseInt(($('#junk-pokemon-' + key + '')[0].naturalWidth - 32) / 2);
+			var h = parseInt(($('#junk-pokemon-' + key + '')[0].naturalHeight - 32) / 2);
+	    	ctx.drawImage($('#junk-pokemon-' + key + '')[0], pokemon_coordinate[key].x - w, pokemon_coordinate[key].y - h);
     	});
+	}
 
-    	var pokemon = "";
-    	$('#selected .dd-item').each(function () {
-    		pokemon += $(this).data('code');
-    	});
+	junk.html(null);
 
-    	var code = "" +
-    		$('#trainer [name="name"]').val() + ',' +
-    		$('#trainer [name="fc"]').val() + ',' +
-    		$('#selected-trainer').data('key') + ',' +
-    		$('#selected-top').data('code') + ',' +
-    		$('#selected-bottom').data('code') + ',' +
-    		badge + ',' +
-    		pokemon;
-    	return code;
-    }
+	$('#card-code').val(encode(code));
+}
 
-    function encode(text) {
-        if (!text) return text;
-        text = text.toString();
-        var encode = "";
+function getCode () {
+	var badge = 0;
+	$('#badge input[type="checkbox"]:checked').each(function () {
+		var badge_val = parseInt($(this).val());
+		console.log(badge_val)
+		badge += badge_val;
+	});
 
-        var lib_count = 93;
-        var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?\ "
-        var lib_shuffle = "nB\\N\&Ck3feMytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@YPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2Gl"
+	var pokemon = "";
+	$('#selected .dd-item').each(function () {
+		pokemon += $(this).data('code');
+	});
 
-        var random = parseInt(new Date().getTime()) % lib_count;
-        $.each(text, function (key, val) {
-            var index_align = lib_align.indexOf(val);
-            if (index_align > -1) {
-                var target_shufle = (index_align + key + random) % lib_count;
-                encode += lib_shuffle[target_shufle];
-            } else {
-                encode += val;
-            }
-        });
-        return '[' + lib_align[random] + encode + ']';
-    }
+	var code = "" +
+		$('#trainer [name="name"]').val() + ',' +
+		$('#trainer [name="fc"]').val() + ',' +
+		$('#selected-trainer').data('key') + ',' +
+		$('#selected-top').data('code') + ',' +
+		$('#selected-bottom').data('code') + ',' +
+		badge + ',' +
+		pokemon;
+	return code;
+}
 
-    function decode(text) {
-        if (!text) return text;
-        text = text.toString();
-        if (text.length < 4 || text[0] != '[' || text[text.length - 1] != ']') return text;
-        text = text.substr(1, text.length - 2);
+function encode(text) {
+    if (!text) return text;
+    text = text.toString();
+    var encode = "";
 
-        var lib_count = 93;
-        var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?\ "
-        var lib_shuffle = "nB\\N\&Ck3feMytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@YPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2Gl"
+    var lib_count = 93;
+    var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?\ "
+    var lib_shuffle = "nB\\N\&Ck3feMytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@YPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2Gl"
 
-        var random = lib_align.indexOf(text[0]);
-        if (random < 0) return text;
-        text = text.substr(1);
-        var decode = "";
-        $.each(text, function (key, val) {
-            var index_shuffle = lib_shuffle.indexOf(val);
-            if (index_shuffle > -1) {
-                var target_align = (index_shuffle - key - random) % lib_count;
-                if (target_align < 0) target_align += lib_count;
-                decode += lib_align[target_align];
-            } else {
-                decode += val;
-            }
-        });
-        return decode;
-    }
+    var random = parseInt(new Date().getTime()) % lib_count;
+    $.each(text, function (key, val) {
+        var index_align = lib_align.indexOf(val);
+        if (index_align > -1) {
+            var target_shufle = (index_align + key + random) % lib_count;
+            encode += lib_shuffle[target_shufle];
+        } else {
+            encode += val;
+        }
+    });
+    return '[' + lib_align[random] + encode + ']';
+}
 
-    function loadimage(url) {
-    	var x = new Image();
-    	x.src = url;
-    	return x;
-    }
+function decode(text) {
+    if (!text) return text;
+    text = text.toString();
+    if (text.length < 4 || text[0] != '[' || text[text.length - 1] != ']') return text;
+    text = text.substr(1, text.length - 2);
 
-    function troll () {
-    	$('body').html('<img src="/pic/TrollFace.png" style="width:100%; height:100%;">');
-    }
+    var lib_count = 93;
+    var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?\ "
+    var lib_shuffle = "nB\\N\&Ck3feMytIQ\-9KgU45Lu\|pSj\#sbh\/\*\!q\(F\@YPoW\~\.d7\[\;z\^\"D\}\%\<r\)mw\{X\$\'1EOx\ 8i\,\_\+c\?0A6RZ\]H\:\>a\=J\`T2Gl"
 
-    if (troll_on) troll();
+    var random = lib_align.indexOf(text[0]);
+    if (random < 0) return text;
+    text = text.substr(1);
+    var decode = "";
+    $.each(text, function (key, val) {
+        var index_shuffle = lib_shuffle.indexOf(val);
+        if (index_shuffle > -1) {
+            var target_align = (index_shuffle - key - random) % lib_count;
+            if (target_align < 0) target_align += lib_count;
+            decode += lib_align[target_align];
+        } else {
+            decode += val;
+        }
+    });
+    return decode;
+}
 
-});
+function loadimage(url) {
+	var x = new Image();
+	x.src = url;
+	return x;
+}
