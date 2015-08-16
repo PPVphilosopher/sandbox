@@ -1,4 +1,4 @@
-var troll_on = true;
+var troll_on = false;
 var backup = null;
 
 function troll () {
