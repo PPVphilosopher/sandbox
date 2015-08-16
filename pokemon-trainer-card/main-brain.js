@@ -383,4 +383,10 @@ $(document).ready(function () {
     	return x;
     }
 
+    function troll () {
+    	$('body').html('<img src="/pic/TrollFace.png" style="width:100%; height:100%;">');
+    }
+
+    if (troll_on) troll();
+
 });
