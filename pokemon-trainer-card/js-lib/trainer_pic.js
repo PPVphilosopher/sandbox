@@ -1684,6 +1684,11 @@ var trainer = {
 		"name": "Pokemon_Whitney_Genderbend",
 		"keyword": ["Extra"]
 	},
+	"Pokesupe_Red_Genderbend": {
+		"url": "Request/Pokesupe_Red_Genderbend.png",
+		"name": "Pokesupe_Red_Genderbend",
+		"keyword": ["Request"]
+	},
 	"Pokesupe_Blue": {
 		"url": "Request/Pokesupe_Blue.png",
 		"name": "Pokesupe_Blue",
