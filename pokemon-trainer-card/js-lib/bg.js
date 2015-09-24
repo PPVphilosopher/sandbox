@@ -35,12 +35,12 @@ var bg_top = {
 	// 	"url_mini": "mono-bug-mini.png",
 	// 	"overlay": "d2.png",
 	// },
-	// "mono-dark": {
-	// 	"name": "Mono type - Dark",
-	// 	"url": "mono-dark.png",
-	// 	"url_mini": "mono-dark-mini.png",
-	// 	"overlay": "d2.png",
-	// },
+	"mono-dark": {
+		"name": "Mono type - Dark",
+		"url": "mono-dark.png",
+		"url_mini": "mono-dark-mini.png",
+		"overlay": "d2.png",
+	},
 	"mono-dragon": {
 		"name": "Mono type - Dragon",
 		"url": "mono-dragon.png",
