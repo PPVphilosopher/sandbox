@@ -71,12 +71,12 @@ var bg_top = {
 	// 	"url_mini": "mono-fire-mini.png",
 	// 	"overlay": "d2.png",
 	// },
-	// "mono-flying": {
-	// 	"name": "Mono type - Flying",
-	// 	"url": "mono-flying.png",
-	// 	"url_mini": "mono-flying-mini.png",
-	// 	"overlay": "d2.png",
-	// },
+	"mono-flying": {
+		"name": "Mono type - Flying",
+		"url": "mono-flying.png",
+		"url_mini": "mono-flying-mini.png",
+		"overlay": "d2.png",
+	},
 	// "mono-ghost": {
 	// 	"name": "Mono type - Ghost",
 	// 	"url": "mono-ghost.png",
