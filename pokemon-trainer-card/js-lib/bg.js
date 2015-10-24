@@ -23,6 +23,12 @@ var bg_top = {
 		"url_mini": "t4-mini.png",
 		"overlay": "d2.png",
 	},
+	"t5": {
+		"name": "SS6 default 01",
+		"url": "t5.png",
+		"url_mini": "t5-mini.png",
+		"overlay": "d2.png",
+	},
 	"trophy": {
 		"name": "Champion trophy",
 		"url": "trophy.png",
@@ -159,6 +165,11 @@ var bg_bottom = {
 		"name": "SS5 default 01",
 		"url": "b4.png",
 		"url_mini": "b4-mini.png",
+	},
+	"b5": {
+		"name": "SS6 default 01",
+		"url": "b5.png",
+		"url_mini": "b5-mini.png",
 	},
 	// "b0": {
 	// 	"name": "no bottom card",

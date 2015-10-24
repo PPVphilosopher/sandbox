@@ -234,3 +234,78 @@ var badgeSS5 = {
 		value: 4096
 	},
 }
+
+var badgeSS6 = {
+	1: {
+		name: "Flareon",
+		url: "gym-flareon.png",
+		card_url: "gym-flareon-card.png",
+		value: 1
+	},
+	2: {
+		name: "Vaporeon",
+		url: "gym-vaporeon.png",
+		card_url: "gym-vaporeon-card.png",
+		value: 2
+	},
+	4: {
+		name: "Jolteon",
+		url: "gym-jolteon.png",
+		card_url: "gym-jolteon-card.png",
+		value: 4
+	},
+	8: {
+		name: "Sylveon",
+		url: "gym-sylveon.png",
+		card_url: "gym-sylveon-card.png",
+		value: 8
+	},
+	16: {
+		name: "Espeon",
+		url: "gym-espeon.png",
+		card_url: "gym-espeon-card.png",
+		value: 16
+	},
+	32: {
+		name: "Umbreon",
+		url: "gym-umbreon.png",
+		card_url: "gym-umbreon-card.png",
+		value: 32
+	},
+	64: {
+		name: "Leafeon",
+		url: "gym-leafeon.png",
+		card_url: "gym-leafeon-card.png",
+		value: 64
+	},
+	128: {
+		name: "Glaceon",
+		url: "gym-glaceon.png",
+		card_url: "gym-glaceon-card.png",
+		value: 128
+	},
+	256: {
+		name: "Lati Elite",
+		url: "elite-lati.png",
+		card_url: "elite-lati-card.png",
+		value: 256
+	},
+	512: {
+		name: "Regi Elite",
+		url: "elite-regi.png",
+		card_url: "elite-regi-card.png",
+		value: 512
+	},
+	1024: {
+		name: "Weather Elite",
+		url: "elite-weather.png",
+		card_url: "elite-weather-card.png",
+		value: 1024
+	},
+	2048: {
+		name: "Space Elite",
+		url: "elite-space.png",
+		card_url: "elite-space-card.png",
+		value: 2048
+	},
+}
