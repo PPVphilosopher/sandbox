@@ -249,8 +249,8 @@ function drawCanvas (code) {
 
 	ctx.font = "18px Tahoma";
 	ctx.fillStyle = "#FFFFFF";
-	ctx.fillText(data[0], 10, 27);
-	ctx.fillText(data[1], 10, 57);
+	ctx.fillText(data[0], 10, 57);
+	ctx.fillText(data[1], 10, 27);
 
 	var badge_get = parseInt(data[5]);
 	for (var i = 1; i <= 4096; i *= 2) {
