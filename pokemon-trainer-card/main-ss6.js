@@ -358,7 +358,7 @@ function decode(text) {
     text = text.toString();
     if (text.length < 4 || text[0] != '[' || text[text.length - 1] != ']') return text;
     text = text.substr(1, text.length - 2);
-    text.replace(/ /g, '');
+    text = text.replace(/ /g, '');
 
     var lib_count = 92;
     var lib_align = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ1234567890\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\<\>\.\/\?"
