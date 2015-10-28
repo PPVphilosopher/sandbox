@@ -178,7 +178,7 @@ function init () {
     });
 
     $('#import_button').on('click', function () {
-    	var code = decode($('#card-code').val());
+    	var code = decode($('#card-code').val().trim());
 
     	var data = code.split(',');
     	// 'name,fc,trainer,top,bottom,badge,pokemon'

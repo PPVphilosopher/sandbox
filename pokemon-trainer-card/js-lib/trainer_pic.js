@@ -1719,4 +1719,14 @@ var trainer = {
 		"name": "Dragonite_Trainer_Ek",
 		"keyword": ["Request"]
 	},
+	"PokemonAnime_Joy": {
+		"url": "Request/PokemonAnime_Joy.png",
+		"name": "PokemonAnime_Joy",
+		"keyword": ["Request"]
+	},
+	"PokemonOrigin_Green": {
+		"url": "Request/PokemonOrigin_Green.png",
+		"name": "PokemonOrigin_Green",
+		"keyword": ["Request"]
+	},
 }
