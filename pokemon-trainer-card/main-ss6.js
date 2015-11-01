@@ -320,8 +320,12 @@ function getCode () {
 
 	$('#trainer [name="fc"]').val(complete_fc);
 
+	var trainer_name = $('#trainer [name="name"]').val();
+	trainer_name = trainer_name.replace(/ /g, '_');
+	$('#trainer [name="name"]').val(trainer_name);
+
 	var code = "" +
-		$('#trainer [name="name"]').val() + ',' +
+		trainer_name + ',' +
 		complete_fc + ',' +
 		$('#selected-trainer').data('key') + ',' +
 		$('#selected-top').data('code') + ',' +
