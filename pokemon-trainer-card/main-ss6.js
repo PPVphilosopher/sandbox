@@ -231,7 +231,7 @@ function drawCanvas (code) {
 	var ctx = c.getContext("2d");
 
 	var data = code.split(',');
-	// 'name,fc,trainer,top,bottom,badge,pokemon'
+	// 'name,fc,trainer,top,bottom,badge,pokemon,ipdata'
 
 	junk.append($('<img id="junk-top" src="pic/card/' + bg_top[data[3]].url + '"/>'));
 	ctx.drawImage($('#junk-top')[0], 0, 0);
@@ -332,6 +332,7 @@ function getCode () {
 		$('#selected-bottom').data('code') + ',' +
 		badge + ',' +
 		pokemon;
+	if (ip_data) code += ',' + ip_data;
 	return code;
 }
 
