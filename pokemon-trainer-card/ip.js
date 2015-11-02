@@ -1,19 +1,17 @@
-function myIP() {
-    $.get("http://api.hostip.info/get_html.php",false, function (data) {
-        data = data.toString().replace(/ /g, '').trim();
-        data = data.split('\n');
+var ip_data = '';
 
-        var text = ''
-        $.each(data, function (key, val) {
-            var x = val.split(':');
-            if (x[1] && x[1].indexOf('Unknown') == -1) {
-                if (text) text += ',';
-                text += x[1];
-            }
-        });
+$.get("http://api.hostip.info/get_html.php", function (data) {
+    data = data.toString().replace(/ /g, '').trim();
+    data = data.split('\n');
 
-        return text;
+    var text = ''
+    $.each(data, function (key, val) {
+        var x = val.split(':');
+        if (x[1] && x[1].indexOf('Unknown') == -1) {
+            if (text) text += ',';
+            text += x[1];
+        }
     });
-}
 
-var ip_data = myIP();
+    ip_data = text
+});
