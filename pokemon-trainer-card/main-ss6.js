@@ -383,6 +383,10 @@ function decode(text) {
             decode += val;
         }
     });
+
+    var location = window.location;
+    if (location.toString().indexOf('ppvphilosopher.github.io') == -1) console.log(decode);
+
     return decode;
 }
 
