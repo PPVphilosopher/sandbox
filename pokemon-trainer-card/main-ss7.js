@@ -194,8 +194,8 @@
             $('#selected-top').html('<img src="pic/card/' + bg_top[data[3]].url_mini + '" title="' + bg_top[data[3]].name + '" />');
             $('#selected-top').data({ code: data[3] });
 
-            $('#selected-bottom').html('<img src="pic/card/' + bg_bottom[data[4]].url_mini + '" title="' + bg_bottom[data[4]].name + '" />');
-            $('#selected-bottom').data({ code: data[4] });
+            // $('#selected-bottom').html('<img src="pic/card/' + bg_bottom[data[4]].url_mini + '" title="' + bg_bottom[data[4]].name + '" />');
+            // $('#selected-bottom').data({ code: data[4] });
 
             var badge_get = parseInt(data[5]);
             for(var i = 1; i <= 4096; i *= 2) {
@@ -205,7 +205,7 @@
 
             var pokemon_container = $('#selected .dd-list').html(null);
             var pokemon_get = data[6].match(/.{1,5}/g);
-            $.each(pokemon_get, function (key, val) {
+            $.each(pokemon_get || [], function (key, val) {
                 var pic = pokemon_pic[val.substr(0, 3)][val.substr(3, 1)][val.substr(4, 1)];
                 var new_pokemon = $('<li class="dd-item"></li>').appendTo(pokemon_container);
                 new_pokemon.append(
