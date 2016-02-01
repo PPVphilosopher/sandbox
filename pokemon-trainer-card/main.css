@@ -65,6 +65,9 @@
 	padding-bottom: 15px;
 	border-bottom: 1px solid #ccc;
 }
+#pokemon {
+	margin-bottom: 200px;
+}
 #trainer-info input{
 	width: 100%;
 }

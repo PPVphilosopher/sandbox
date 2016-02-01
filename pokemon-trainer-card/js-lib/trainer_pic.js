@@ -1652,81 +1652,97 @@ var trainer = {
 	"Clair_Genderbend": {
 		"url": "Extra/Clair_Genderbend.png",
 		"name": "Pokemon_Clair_Genderbend",
-		"keyword": ["Extra"]
+		"keyword": ["Extra"],
+		"noBattleImage": true
 	},
 	"Erika_Genderbend": {
 		"url": "Extra/Erika_Genderbend.png",
 		"name": "Pokemon_Erika_Genderbend",
-		"keyword": ["Extra"]
+		"keyword": ["Extra"],
+		"noBattleImage": true
 	},
 	"Janine_Genderbend": {
 		"url": "Extra/Janine_Genderbend.png",
 		"name": "Pokemon_Janine_Genderbend",
-		"keyword": ["Extra"]
+		"keyword": ["Extra"],
+		"noBattleImage": true
 	},
 	"Jasmine_Genderbend": {
 		"url": "Extra/Jasmine_Genderbend.png",
 		"name": "Pokemon_Jasmine_Genderbend",
-		"keyword": ["Extra"]
+		"keyword": ["Extra"],
+		"noBattleImage": true
 	},
 	"Misty_Genderbend": {
 		"url": "Extra/Misty_Genderbend.png",
 		"name": "Pokemon_Misty_Genderbend",
-		"keyword": ["Extra"]
+		"keyword": ["Extra"],
+		"noBattleImage": true
 	},
 	"Sabrina_Genderbend": {
 		"url": "Extra/Sabrina_Genderbend.png",
 		"name": "Pokemon_Sabrina_Genderbend",
-		"keyword": ["Extra"]
+		"keyword": ["Extra"],
+		"noBattleImage": true
 	},
 	"Whitney_Genderbend": {
 		"url": "Extra/Whitney_Genderbend.png",
 		"name": "Pokemon_Whitney_Genderbend",
-		"keyword": ["Extra"]
+		"keyword": ["Extra"],
+		"noBattleImage": true
 	},
 	"PokemonConquest_Heroine": {
 		"url": "Request/PokemonConquest_Heroine.png",
 		"name": "PokemonConquest_Heroine",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 	"Pokesupe_Red_Genderbend": {
 		"url": "Request/Pokesupe_Red_Genderbend.png",
 		"name": "Pokesupe_Red_Genderbend",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 	"Pokesupe_Blue": {
 		"url": "Request/Pokesupe_Blue.png",
 		"name": "Pokesupe_Blue",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 	"Pokesupe_Crystal": {
 		"url": "Request/Pokesupe_Crystal.png",
 		"name": "Pokesupe_Crystal",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 	"Aikawa_Kizuna": {
 		"url": "Request/Prunus_Girl_Aikawa_Kizuna.png",
 		"name": "Prunus_Girl_Aikawa_Kizuna",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 	"Penguin_Hut": {
 		"url": "Request/Penguin_Hut.png",
 		"name": "Penguin_Hut",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 	"Dragonite_Trainer_Ek": {
 		"url": "Request/Dragonite_Trainer_Ek.png",
 		"name": "Dragonite_Trainer_Ek",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 	"PokemonAnime_Joy": {
 		"url": "Request/PokemonAnime_Joy.png",
 		"name": "PokemonAnime_Joy",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 	"PokemonOrigin_Green": {
 		"url": "Request/PokemonOrigin_Green.png",
 		"name": "PokemonOrigin_Green",
-		"keyword": ["Request"]
+		"keyword": ["Request"],
+		"noBattleImage": true
 	},
 }

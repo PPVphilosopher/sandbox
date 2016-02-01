@@ -309,3 +309,78 @@ var badgeSS6 = {
 		value: 2048
 	},
 }
+
+var badgeSS7 = {
+	1: {
+		name: "Iron Fist",
+		url: "luckypunch.png",
+		card_url: "gym-if.png",
+		value: 1
+	},
+	2: {
+		name: "Bulletproof",
+		url: "ringtarget.png",
+		card_url: "gym-bp.png",
+		value: 2
+	},
+	4: {
+		name: "Heavy Metal",
+		url: "ironball.png",
+		card_url: "gym-hm.png",
+		value: 4
+	},
+	8: {
+		name: "Mega Launcher",
+		url: "squirtbottle.png",
+		card_url: "gym-ml.png",
+		value: 8
+	},
+	16: {
+		name: "Reckless",
+		url: "stickybarb.png",
+		card_url: "gym-rl.png",
+		value: 16
+	},
+	32: {
+		name: "Super Luck",
+		url: "scopelens.png",
+		card_url: "gym-sl.png",
+		value: 32
+	},
+	64: {
+		name: "Soundproof",
+		url: "pokeflute.png",
+		card_url: "gym-sp.png",
+		value: 64
+	},
+	128: {
+		name: "Strong Jaw",
+		url: "deepseatooth.png",
+		card_url: "gym-sj.png",
+		value: 128
+	},
+	256: {
+		name: "Z Elite",
+		url: "smartcontestmasterrankribbon-s.png",
+		card_url: "elite-z.png",
+		value: 256
+	},
+	512: {
+		name: "Y Elite",
+		url: "coolcontestmasterrankribbon-s.png",
+		card_url: "elite-y.png",
+		value: 512
+	},
+	1024: {
+		name: "X Elite",
+		url: "beautycontestmasterrankribbon-s.png",
+		card_url: "elite-x.png",
+		value: 1024
+	},
+	2048: {
+		name: "D Elite",
+		url: "cutecontestmasterrankribbon-s.png",
+		card_url: "elite-d.png",
+		value: 2048
+	},
+}

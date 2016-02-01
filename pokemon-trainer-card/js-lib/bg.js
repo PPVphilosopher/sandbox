@@ -29,6 +29,18 @@ var bg_top = {
 		"url_mini": "t5-mini.png",
 		"overlay": "d2.png",
 	},
+	"t6": {
+		"name": "Wifi battle bg",
+		"url": "t6.png",
+		"url_mini": "t6-mini.png",
+		"overlay": "d2.png",
+	},
+	"t7": {
+		"name": "Victory road battle bg",
+		"url": "t7.png",
+		"url_mini": "t7-mini.png",
+		"overlay": "d2.png",
+	},
 	"trophy": {
 		"name": "Champion trophy",
 		"url": "trophy.png",
