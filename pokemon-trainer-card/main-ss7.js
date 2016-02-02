@@ -187,7 +187,7 @@
             $('#trainer-info [name="name"]').val(data[0]);
             $('#trainer-info [name="fc"]').val(data[1]);
 
-            $('#selected-trainer').html('<img src="pic/trainer-battle-custom/' + trainer[data[2]].url + '" title="' + data[2] + '" />');
+            $('#selected-trainer').html('<img src="pic/trainer-full-resize/' + trainer[data[2]].url + '" title="' + data[2] + '" />');
             $('#selected-trainer-name').html(trainer[data[2]].name);
             $('#selected-trainer').data({ url: trainer[data[2]].url, key: data[2] });
 
@@ -356,7 +356,7 @@
             $.each(trainer, function (key, val) {
                 if (val.keyword.indexOf(category) > -1) {
                     if (!val.noBattleImage) {
-                        var trainer = $('<img src="pic/trainer-battle-custom/' + val.url + '" title="' + val.name + '" />').appendTo(preview_target);
+                        var trainer = $('<img src="pic/trainer-full-resize/' + val.url + '" title="' + val.name + '" />').appendTo(preview_target);
                         trainer.data(val);
                         trainer.on('click', function () { $.cardmakerTrainer.selectTrainer(trainer, key); });
                     }
