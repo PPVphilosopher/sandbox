@@ -822,7 +822,8 @@ var trainer = {
 	"Emmet&Ingo": {
 		"url": "Unova/Emmet&Ingo.png",
 		"name": "Emmet&Ingo",
-		"keyword": ["Unova"]
+		"keyword": ["Unova"],
+		"noBattleImage": true
 	},
 	"Emmet": {
 		"url": "Unova/Emmet.png",
