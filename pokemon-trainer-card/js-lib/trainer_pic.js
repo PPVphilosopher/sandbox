@@ -1716,6 +1716,11 @@ var trainer = {
 		"keyword": ["Request"],
 		"noBattleImage": true
 	},
+	"Pokesupe_Yellow": {
+		"url": "Request/Pokesupe_Yellow.png",
+		"name": "Pokesupe_Yellow",
+		"keyword": ["Request"]
+	},
 	"Aikawa_Kizuna": {
 		"url": "Request/Prunus_Girl_Aikawa_Kizuna.png",
 		"name": "Prunus_Girl_Aikawa_Kizuna",
