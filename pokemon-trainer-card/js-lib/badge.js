@@ -384,3 +384,60 @@ var badgeSS7 = {
 		value: 2048
 	},
 }
+
+var badgeSS8 = {
+	1: {
+		name: "Bug-Psychic",
+		url: "bug-psychic.png",
+		card_url: "gym-bp.png",
+		value: 1
+	},
+	2: {
+		name: "Dark-Poison",
+		url: "dark-poison.png",
+		card_url: "gym-dp.png",
+		value: 2
+	},
+	4: {
+		name: "Dragon-Electric",
+		url: "dragon-electric.png",
+		card_url: "gym-de.png",
+		value: 4
+	},
+	8: {
+		name: "Fairy-Rock",
+		url: "fairy-rock.png",
+		card_url: "gym-fr.png",
+		value: 8
+	},
+	16: {
+		name: "Fighting-Ghost",
+		url: "fighting-ghost.png",
+		card_url: "gym-fg.png",
+		value: 16
+	},
+	32: {
+		name: "Fire-Grass",
+		url: "fire-grass.png",
+		card_url: "gym-fgs.png",
+		value: 32
+	},
+	64: {
+		name: "Flying-Ice",
+		url: "flying-ice.png",
+		card_url: "gym-fi.png",
+		value: 64
+	},
+	128: {
+		name: "Ground-Water",
+		url: "ground-water.png",
+		card_url: "gym-gw.png",
+		value: 128
+	},
+	256: {
+		name: "Normal-Steel",
+		url: "normal-steel.png",
+		card_url: "gym-ns.png",
+		value: 256
+	},
+}

@@ -17,6 +17,7 @@
 }
 #badge [class*="col-md"] {
 	pointer-events: none;
+	min-height: 100px;
 }
 #badge input[type="checkbox"] {
 	display: none;
