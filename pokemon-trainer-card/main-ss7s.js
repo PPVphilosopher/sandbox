@@ -11,7 +11,7 @@
 
             $('#badge [type="checkbox"]').on('change', function () {
                 var value = parseInt($(this).val());
-                loadimage('pic/badgeSS8/' + badgeSS8[value].card_url);
+                loadimage('pic/badgeSS7s/' + badgeSS7s[value].card_url);
             });
 
             $('#import_button').on('click', function () {
@@ -55,7 +55,7 @@
             var badge_get = parseInt(data[5]);
             for (var i = 1; i <= 4096; i *= 2) {
                 if ((badge_get | i ) == badge_get) {
-                    junk.append($('<img id="junk-badge-' + i + '" src="pic/badgeSS8/' + badgeSS8[i].card_url + '"/>'));
+                    junk.append($('<img id="junk-badge-' + i + '" src="pic/badgeSS7s/' + badgeSS7s[i].card_url + '"/>'));
                     ctx.drawImage($('#junk-badge-' + i + '')[0], 0, 0);
                 }
             }

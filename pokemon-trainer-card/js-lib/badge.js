@@ -385,7 +385,7 @@ var badgeSS7 = {
 	},
 }
 
-var badgeSS8 = {
+var badgeSS7s = {
 	1: {
 		name: "Bug-Psychic",
 		url: "bug-psychic.png",
