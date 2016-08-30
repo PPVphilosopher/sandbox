@@ -1,4 +1,76 @@
 var bg_top = {
+	"battle-chateau-baron": {
+		"name": "Battle Chateau Baron",
+		"url": "battle-chateau-baron.png",
+		"url_mini": "battle-chateau-baron-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-baroness": {
+		"name": "Battle Chateau Baroness",
+		"url": "battle-chateau-baroness.png",
+		"url_mini": "battle-chateau-baroness-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-viscount": {
+		"name": "Battle Chateau Viscount",
+		"url": "battle-chateau-viscount.png",
+		"url_mini": "battle-chateau-viscount-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-viscountess": {
+		"name": "Battle Chateau Viscountess",
+		"url": "battle-chateau-viscountess.png",
+		"url_mini": "battle-chateau-viscountess-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-earl": {
+		"name": "Battle Chateau Earl",
+		"url": "battle-chateau-earl.png",
+		"url_mini": "battle-chateau-earl-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-countess": {
+		"name": "Battle Chateau Countess",
+		"url": "battle-chateau-countess.png",
+		"url_mini": "battle-chateau-countess-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-marquis": {
+		"name": "Battle Chateau Marquis",
+		"url": "battle-chateau-marquis.png",
+		"url_mini": "battle-chateau-marquis-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-marchioness": {
+		"name": "Battle Chateau Marchioness",
+		"url": "battle-chateau-marchioness.png",
+		"url_mini": "battle-chateau-marchioness-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-duke": {
+		"name": "Battle Chateau Duke",
+		"url": "battle-chateau-duke.png",
+		"url_mini": "battle-chateau-duke-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-duchess": {
+		"name": "Battle Chateau Duchess",
+		"url": "battle-chateau-duchess.png",
+		"url_mini": "battle-chateau-duchess-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-grand-duke": {
+		"name": "Battle Chateau Grand Duke",
+		"url": "battle-chateau-grand-duke.png",
+		"url_mini": "battle-chateau-grand-duke-mini.png",
+		"overlay": "d5.png",
+	},
+	"battle-chateau-grand-duchess": {
+		"name": "Battle Chateau Grand Duchess",
+		"url": "battle-chateau-grand-duchess.png",
+		"url_mini": "battle-chateau-grand-duchess-mini.png",
+		"overlay": "d5.png",
+	},
 	"t1": {
 		"name": "default 01",
 		"url": "t1.png",
